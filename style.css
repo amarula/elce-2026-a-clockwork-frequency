@@ -1,0 +1,38 @@
+/* Hide Slidev's built-in floating nav toolbar (prev/next, overview, dark
+   mode, drawing, etc.). On tall/narrow browser windows Slidev pins it
+   persistently to the right edge of the slide, covering slide content.
+   Keyboard/swipe navigation still works without it. */
+#slide-container > .absolute.bottom-0.left-0 {
+  display: none !important;
+}
+
+/* The "Goto slide" quick-jump dialog (opened with the "g" key) always
+   renders its full slide-list dropdown in the DOM, even while closed. When
+   closed it's only pushed 5rem above the viewport, so with more than a
+   handful of slides the list is tall enough to still peek in from the right
+   edge, permanently covering slide content. Hide it fully while closed. */
+#slidev-goto-dialog.-top-20 {
+  visibility: hidden;
+}
+
+/* Slidev's presenter view (/presenter) draws a progress bar across the bottom
+   of the current-slide pane -- see @slidev/client/pages/presenter.vue. It is
+   the only element in the codebase actually called a progress bar; nothing on
+   the slides themselves draws one. Not wanted. */
+.progress-bar {
+  display: none !important;
+}
+
+/* Slidev's ```lang {12,21-23} marks those lines .slidev-code-highlighted and
+   fades every other line to 30 % (.slidev-code-dishonored). Inside .code-mark we
+   want only the first half of that: the marked lines come out bold, everything
+   else stays at full strength. Dimming would say "ignore the rest", and on slide
+   17 the rest is the panel timing the reader is supposed to read. */
+.code-mark .slidev-code-highlighted {
+  font-weight: 700;
+}
+
+.code-mark .slidev-code-dishonored {
+  opacity: 1;
+  pointer-events: auto;
+}

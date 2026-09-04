@@ -1,0 +1,14 @@
+node_modules
+.DS_Store
+dist
+*.local
+.vite-inspect
+.remote-assets
+components.d.ts
+cvd-check-*.png
+__pycache__
+.claude
+
+# Scratch list of what to say out loud, kept out of the deck on purpose.
+# Becomes presenter notes at the end; delete this entry when it does.
+talking-points.md
