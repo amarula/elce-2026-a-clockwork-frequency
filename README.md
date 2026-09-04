@@ -3,6 +3,11 @@
 Slides for the ELCE 2026 talk, built with [Slidev](https://github.com/slidevjs/slidev)
 and the Amarula theme (submodule).
 
+The theme is a git submodule, so clone with it:
+
+- `git clone --recursive <this repository>`
+- or, in an existing clone, `git submodule update --init`
+
 To start the slide show:
 
 - `pnpm install`
