@@ -1267,12 +1267,12 @@ Generic SSC - DT Schema
   </div>
   <div class="mt-[13px] text-xl font-semibold">
     <span class="text-gray-400 line-through">consumer / producer</span>
-    <span class="text-gray-400">&nbsp;&rarr;&nbsp;</span>
+    <svg viewBox="0 0 72 24" class="inline-block w-[72px] h-[24px] mx-3 align-middle" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg>
     <span>configuration</span>
   </div>
   <div class="mt-3 border-l-2 border-gray-300 pl-5">
     <div class="text-base italic leading-snug">&ldquo;<b>Configuration</b> of common clocks, which affect multiple consumer devices can be similarly specified in <b>the clock provider node</b>.&rdquo;</div>
-    <div class="font-mono text-xs text-gray-500 mt-1">dtschema/schemas/clock/clock.yaml</div>
+    <div class="font-mono text-xs text-gray-800 mt-1">dtschema/schemas/clock/clock.yaml</div>
   </div>
 </div>
 
