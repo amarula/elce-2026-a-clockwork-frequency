@@ -1792,28 +1792,32 @@ Conclusions - What's Next
 
 ::body::
 
-<div class="pl-[27px] h-[440px] pt-2">
-  <ul class="pl-7 list-disc space-y-5">
+<div class="flex flex-col pl-[27px] pr-4 h-[446px] pt-1">
+  <ul class="pl-7 list-disc space-y-2">
     <li class="text-2xl">
       <b>Support your platform</b>
-      <div class="text-xl text-gray-500">Minimal effort</div>
-      <div class="text-xl text-gray-500">Implement the callback</div>
-      <div class="text-xl text-gray-500">The framework handles the rest</div>
-      <div class="text-xl text-gray-500">Validate the framework, extend or fix it when needed</div>
+      <div class="text-lg text-gray-500">Minimal effort</div>
+      <div class="text-lg text-gray-500">Implement the callback</div>
+      <div class="text-lg text-gray-500">The framework handles the rest</div>
+      <div class="text-lg text-gray-500">Validate the framework, extend or fix it when needed</div>
     </li>
     <li class="text-2xl">
       <b>Rework the legacy code</b>
-      <div class="text-xl text-gray-500">Move existing vendor-specific implementations onto the common infrastructure</div>
+      <div class="text-lg text-gray-500">Move existing vendor-specific implementations onto the common infrastructure</div>
     </li>
     <li class="text-2xl">
       <b>Need the profile parameter?</b>
-      <div class="text-xl text-gray-500">Extend the binding where the silicon lets you choose</div>
+      <div class="text-lg text-gray-500">Extend the binding where the silicon lets you choose</div>
     </li>
     <li class="text-2xl">
       <b>Need a platform-specific parameter?</b>
-      <div class="text-xl text-gray-500">Remember AM33xx/AM43xx with its platform-specific <span class="font-mono text-lg">ti,min-div</span> parameter?</div>
+      <div class="text-lg text-gray-500">Remember AM33xx/AM43xx with its platform-specific <span class="font-mono text-base">ti,min-div</span> parameter?</div>
     </li>
   </ul>
+  <div class="flex items-center justify-center gap-4 mt-auto text-2xl font-semibold">
+    <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    Every new implementation makes the core stronger
+  </div>
 </div>
 
 ---
