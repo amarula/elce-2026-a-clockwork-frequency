@@ -1209,7 +1209,7 @@ Generic SSC - DT Schema
 
 ::body::
 
-<div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-[1px]">
+<div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-[4px]">
   <div class="relative rounded-lg border border-gray-300 px-4 py-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
       <span class="inline-block rounded-full bg-[#22863a]" style="width: 0.8em; height: 0.8em; position: relative; top: 0.02em; margin-right: 0.15em"></span>
@@ -1230,42 +1230,42 @@ Generic SSC - DT Schema
       <div class="text-sm whitespace-nowrap"><span class="text-gray-500">participants</span> <b>Krzysztof Kozlowski</b>, <b>Rob Herring</b>, <b>Dario Binacchi</b></div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-4 pb-2 mt-4">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-4 pb-2 mt-[20px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">dtschema/schemas/clock/clock.yaml</div>
-    <div class="grid grid-cols-[auto_1fr] gap-x-5 font-mono text-[10px] leading-[1.4] [font-variant-ligatures:none]">
+    <div class="grid grid-cols-[auto_1fr] gap-x-5 font-mono text-[10px] leading-[1.35] [font-variant-ligatures:none]">
       <div></div>
-      <div class="text-gray-500">&nbsp;properties:</div>
+      <div class="text-gray-500">properties:</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;<b>assigned-clock-sscs</b>:</div>
+      <div class="text-gray-500">&nbsp;&nbsp;<b style="color:#22863a">assigned-clock-sscs</b>:</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;$ref: /schemas/types.yaml#/definitions/<b>uint32-matrix</b></div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;$ref:&nbsp;/schemas/types.yaml#/definitions/uint32-matrix</div>
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; a list, one entry per clock</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; three u32 values each</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- description: The modulation frequency</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;description:&nbsp;<b style="color:#22863a">The&nbsp;modulation&nbsp;frequency</b></div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- description: The modulation depth in <b>permyriad</b></div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;description:&nbsp;<b style="color:#22863a">The&nbsp;modulation&nbsp;depth&nbsp;in&nbsp;permyriad</b></div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- description: The modulation method, down-spread(3),</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;description:&nbsp;<b style="color:#22863a">The&nbsp;modulation&nbsp;method</b>,&nbsp;down-spread(3),</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;up-spread(2), center-spread(1), no-spread(0)</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;up-spread(2),&nbsp;center-spread(1),&nbsp;no-spread(0)</div>
       <div></div>
       <div>&nbsp;</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;dependentRequired:</div>
+      <div class="text-gray-500">dependentRequired:</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;assigned-clock-parents:&nbsp;&nbsp;&nbsp;[assigned-clocks]</div>
+      <div class="text-gray-500">&nbsp;&nbsp;assigned-clock-parents:&nbsp;&nbsp;&nbsp;[assigned-clocks]</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;assigned-clock-rates:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[assigned-clocks]</div>
+      <div class="text-gray-500">&nbsp;&nbsp;assigned-clock-rates:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[assigned-clocks]</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;assigned-clock-rates-u64: [assigned-clocks]</div>
+      <div class="text-gray-500">&nbsp;&nbsp;assigned-clock-rates-u64:&nbsp;[assigned-clocks]</div>
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; needs assigned-clocks</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;<b>assigned-clock-sscs</b>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[assigned-clocks]</b></div>
+      <div class="text-gray-500">&nbsp;&nbsp;<b style="color:#22863a">assigned-clock-sscs</b>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[assigned-clocks]</b></div>
     </div>
   </div>
-  <div class="mt-4 text-xl font-semibold">
+  <div class="mt-[13px] text-xl font-semibold">
     <span class="text-gray-400 line-through">consumer / producer</span>
     <span class="text-gray-400">&nbsp;&rarr;&nbsp;</span>
     <span>configuration</span>
