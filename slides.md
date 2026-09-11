@@ -1843,8 +1843,10 @@ Sebin Francis, Stephen Boyd and Tero Kristo.
 </div>
 
 <div class="mt-6">
-Thanks to Alberto Bianchi, Alberto Panizzo, Andrea Ricchi, Michael Trimarchi
-and Vera Binacchi (my daughter) for the slides review and refinement.
+Thanks to Alberto Bianchi, Alberto Panizzo, Andrea Ricchi, Annachiara Gallo,
+Anthony Brandon, Francesco Nicoletta Puzzillo, Margherita Milani, Michael
+Trimarchi, Patrick Barsanti and Vera Binacchi (my daughter) for the slides
+review and refinement.
 </div>
 
 <div class="mt-6">
