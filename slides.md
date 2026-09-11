@@ -473,12 +473,12 @@ AM33xx/AM43xx - Linux Integration
 </div>
 
 ---
-title: AM33xx/AM43xx - Custom Board
+title: AM33xx/AM43xx - SSC In Action
 ---
 
 ::title::
 
-AM33xx/AM43xx - Custom Board
+AM33xx/AM43xx - SSC In Action
 
 ::body::
 
@@ -698,12 +698,12 @@ STM32F4/STM32F7 - Linux Integration
 </div>
 
 ---
-title: STM32F4/STM32F7 - Configuration Example
+title: STM32F4/STM32F7 - SSC In Action
 ---
 
 ::title::
 
-STM32F4/STM32F7 - Configuration Example
+STM32F4/STM32F7 - SSC In Action
 
 ::body::
 
@@ -1580,12 +1580,12 @@ Back to i.MX8M - Linux Integration
 </div>
 
 ---
-title: Back to i.MX8M - Linux Integration
+title: Back to i.MX8M - SSC In Action
 ---
 
 ::title::
 
-Back to i.MX8M - Linux Integration
+Back to i.MX8M - SSC In Action
 
 ::body::
 
