@@ -427,8 +427,8 @@ AM33xx/AM43xx - Linux Integration
   <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
     <span class="font-mono normal-case font-normal tracking-normal text-gray-500">drivers/clk/ti/dpll3xxx.c</span>
   </div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.27] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; on rate change</div>
+    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.27] [font-variant-ligatures:none]">
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; on rate change</div>
       <div class="text-gray-500">int&nbsp;<b>omap3_noncore_dpll_set_rate</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;rate,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;parent_rate)</div>
@@ -438,7 +438,7 @@ AM33xx/AM43xx - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;<b>omap3_noncore_dpll_program</b>(clk,&nbsp;freqsel);</div>
       <div></div>
       <div class="h-1.5"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; after M, N calculation</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; after M, N calculation</div>
       <div class="text-gray-500">static&nbsp;int&nbsp;<b>omap3_noncore_dpll_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk,&nbsp;u16&nbsp;freqsel)</div>
       <div></div>
       <div class="text-gray-500">{</div>
@@ -448,7 +448,7 @@ AM33xx/AM43xx - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(clk);</div>
       <div></div>
       <div class="h-1.5"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; SSC setup</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; SSC setup</div>
       <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk)</div>
       <div></div>
       <div class="text-gray-500">{</div>
@@ -652,8 +652,8 @@ STM32F4/STM32F7 - Linux Integration
   <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
     <span class="font-mono font-normal normal-case tracking-normal text-gray-500">drivers/clk/clk-stm32f4.c</span>
   </div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.33] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; on init</div>
+    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.33] [font-variant-ligatures:none]">
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; on init</div>
       <div class="text-gray-500">static&nbsp;void&nbsp;__init&nbsp;<b>stm32f4_rcc_init</b>(struct&nbsp;device_node&nbsp;*np)</div>
       <div></div>
       <div class="text-gray-500">{</div>
@@ -663,7 +663,7 @@ STM32F4/STM32F7 - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">stm32f4_pll_init_ssc</b>(pll_vco_hw,&nbsp;&amp;ssc_conf);</div>
       <div></div>
       <div class="h-1.5"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; on rate change</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; on rate change</div>
       <div class="text-gray-500">static&nbsp;int&nbsp;<b>stm32f4_pll_set_rate</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;rate,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;parent_rate)</div>
@@ -675,7 +675,7 @@ STM32F4/STM32F7 - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">stm32f4_pll_set_ssc</b>(hw,&nbsp;parent_rate,&nbsp;<b style="color:#22863a">n</b>);</div>
       <div></div>
       <div class="h-1.5"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; SSC setup</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; SSC setup</div>
       <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">stm32f4_pll_set_ssc</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;parent_rate,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;<b style="color:#22863a">ndiv</b>)</div>
@@ -1239,9 +1239,9 @@ Generic SSC - DT Schema
       <div class="text-gray-500">&nbsp;&nbsp;<b style="color:#22863a">assigned-clock-sscs</b>:</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;$ref:&nbsp;/schemas/types.yaml#/definitions/uint32-matrix</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; a list, one entry per clock</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; a list, one entry per clock</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; three u32 values each</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; three u32 values each</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;description:&nbsp;<b style="color:#22863a">The&nbsp;modulation&nbsp;frequency</b></div>
@@ -1261,7 +1261,7 @@ Generic SSC - DT Schema
       <div class="text-gray-500">&nbsp;&nbsp;assigned-clock-rates:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[assigned-clocks]</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;assigned-clock-rates-u64:&nbsp;[assigned-clocks]</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; needs assigned-clocks</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; needs assigned-clocks</div>
       <div class="text-gray-500">&nbsp;&nbsp;<b style="color:#22863a">assigned-clock-sscs</b>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[assigned-clocks]</b></div>
     </div>
   </div>
@@ -1309,8 +1309,8 @@ Generic SSC - One More Callback
   </div>
   <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[24px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">include/linux/clk-provider.h</div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.35] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; SSC parameters</div>
+    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.35] [font-variant-ligatures:none]">
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; SSC parameters</div>
       <div class="text-gray-500">struct&nbsp;<b style="color:#22863a">clk_spread_spectrum</b>&nbsp;{</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;<b style="color:#22863a">modfreq_hz</b>;</div>
@@ -1324,7 +1324,7 @@ Generic SSC - One More Callback
       <div class="h-4"></div>
       <div></div>
       <div class="text-gray-500">struct&nbsp;<b>clk_ops</b>&nbsp;{</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; driver callback</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; driver callback</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<b style="color:#22863a">set_spread_spectrum</b>)(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
@@ -1332,7 +1332,7 @@ Generic SSC - One More Callback
       <div class="text-gray-500">};</div>
       <div></div>
       <div class="h-4"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; core API</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; core API</div>
       <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
@@ -1340,16 +1340,16 @@ Generic SSC - One More Callback
   </div>
   <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[24px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk.c</div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.35] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; core</div>
+    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.35] [font-variant-ligatures:none]">
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; core</div>
       <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
       <div></div>
       <div class="text-gray-500">{</div>
-      <div class="ml-[58px] text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">to</div>
+      <div class="ml-[58px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">to</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>)</div>
-      <div class="ml-[80px] text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">driver</div>
+      <div class="ml-[80px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">driver</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>(hw,&nbsp;ss_conf);</div>
     </div>
   </div>
@@ -1369,11 +1369,11 @@ Generic SSC - One More Call
   <div class="relative rounded-lg border border-gray-300 px-6 pt-3 pb-1 mt-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-conf.c</div>
     <div class="grid grid-cols-[auto_1fr] gap-x-5 font-mono text-[12px] leading-[1.25] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; early in clock setup</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; early in clock setup</div>
       <div class="text-gray-500">int&nbsp;<b>of_clk_set_defaults</b>(struct&nbsp;device_node&nbsp;*node,&nbsp;bool&nbsp;clk_supplier)</div>
       <div></div>
       <div class="text-gray-500">{</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; SSC through DT</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; SSC through DT</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;<b style="color:#22863a">__set_clk_spread_spectrum</b>(node,&nbsp;clk_supplier);</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;__set_clk_parents(node,&nbsp;clk_supplier);</div>
@@ -1393,7 +1393,7 @@ Generic SSC - One More Call
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;of_property_count_elems_of_size(node,&nbsp;"<b style="color:#22863a">assigned-clock-sscs</b>",</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elem_size);</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; load SSC parameters</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; load SSC parameters</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;of_property_read_u32_array(node,&nbsp;"<b style="color:#22863a">assigned-clock-sscs</b>",&nbsp;(u32&nbsp;*)<b style="color:#22863a">sscs</b>,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;*&nbsp;3);</div>
@@ -1401,13 +1401,13 @@ Generic SSC - One More Call
       <div>&nbsp;</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(<b>index</b>&nbsp;=&nbsp;0;&nbsp;<b>index</b>&nbsp;&lt;&nbsp;count;&nbsp;<b>index</b>++)&nbsp;{</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">4 &mdash; SSC</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">4 &mdash; SSC</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*<b style="color:#22863a">conf</b>&nbsp;=&nbsp;&amp;<b style="color:#22863a">sscs</b>[<b>index</b>];</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!conf-&gt;<b style="color:#22863a">modfreq_hz</b>&nbsp;&amp;&amp;&nbsp;!conf-&gt;<b style="color:#22863a">spread_bp</b>&nbsp;&amp;&amp;&nbsp;!conf-&gt;<b style="color:#22863a">method</b>)</div>
-      <div class="ml-[50px] text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">to</div>
+      <div class="ml-[50px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">to</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;</div>
-      <div class="ml-[72px] text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">clock</div>
+      <div class="ml-[72px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">clock</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;of_parse_phandle_with_args(node,&nbsp;"<b>assigned-clocks</b>",</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"#clock-cells",&nbsp;<b>index</b>,&nbsp;&amp;clkspec);</div>
@@ -1415,7 +1415,7 @@ Generic SSC - One More Call
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk&nbsp;=&nbsp;of_clk_get_from_provider(&amp;clkspec);</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hw&nbsp;=&nbsp;__clk_get_hw(clk);</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">5 &mdash; the core call</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">5 &mdash; the core call</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(hw,&nbsp;<b style="color:#22863a">conf</b>);</div>
     </div>
   </div>
@@ -1435,7 +1435,7 @@ i.MX95 - Linux Integration
 <div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-3">
   <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-scmi.c</div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[10px] leading-[1.3] [font-variant-ligatures:none]">
+    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[10px] leading-[1.3] [font-variant-ligatures:none]">
       <div></div>
       <div class="text-gray-500">&nbsp;static&nbsp;const&nbsp;struct&nbsp;clk_ops&nbsp;*</div>
       <div></div>
@@ -1448,7 +1448,7 @@ i.MX95 - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ops&nbsp;=&nbsp;devm_kzalloc(dev,&nbsp;sizeof(*ops),&nbsp;GFP_KERNEL);</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(oem_data&nbsp;&amp;&amp;&nbsp;(feats_key&nbsp;&amp;&nbsp;BIT(SCMI_CLK_EXT_OEM_SSC_SUPPORTED)))</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; runtime registration</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; runtime registration</div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>ops-&gt;set_spread_spectrum&nbsp;=&nbsp;oem_data-&gt;set_spread_spectrum;</b></div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ops;</div>
@@ -1456,8 +1456,8 @@ i.MX95 - Linux Integration
   </div>
   <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-6">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-scmi-oem.c</div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[10px] leading-[1.3] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; OEM table</div>
+    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[10px] leading-[1.3] [font-variant-ligatures:none]">
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; OEM table</div>
       <div style="color:#22863a">+static&nbsp;const&nbsp;struct&nbsp;scmi_clk_oem&nbsp;scmi_clk_oem_imx&nbsp;=&nbsp;{</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.query_ext_oem_feats&nbsp;=&nbsp;scmi_clk_imx_query_oem_feats,</div>
@@ -1467,7 +1467,7 @@ i.MX95 - Linux Integration
       <div style="color:#22863a">+};</div>
       <div></div>
       <div class="h-1.5"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; driver callback</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; driver callback</div>
       <div style="color:#22863a">+static&nbsp;int</div>
       <div></div>
       <div style="color:#22863a">+scmi_clk_imx_set_spread_spectrum(struct&nbsp;clk_hw&nbsp;*hw,</div>
@@ -1477,7 +1477,7 @@ i.MX95 - Linux Integration
       <div style="color:#22863a">+{</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;scmi_clk&nbsp;*clk&nbsp;=&nbsp;to_scmi_clk(hw);</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; SSC setup</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; SSC setup</div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;extConfigValue[7:0]&nbsp;&nbsp;&nbsp;-&nbsp;spread&nbsp;percentage&nbsp;(%)</div>
@@ -1538,19 +1538,19 @@ Back to i.MX8M - Linux Integration
   <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-5">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/imx/clk-pll14xx.c</div>
     <div class="grid grid-cols-[auto_1fr] gap-x-5 font-mono text-[10px] leading-[1.3] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; registration</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; registration</div>
       <div class="text-gray-500">&nbsp;static&nbsp;const&nbsp;struct&nbsp;clk_ops&nbsp;clk_pll1443x_ops&nbsp;=&nbsp;{</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>.set_spread_spectrum</b>&nbsp;=&nbsp;clk_pll1443x_set_spread_spectrum,</div>
       <div></div>
       <div class="h-1"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; driver callback</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; driver callback</div>
       <div style="color:#22863a">+static&nbsp;int&nbsp;clk_pll1443x_set_spread_spectrum(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
       <div></div>
       <div style="color:#22863a">+{</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; cache SSC conf</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; cache SSC conf</div>
       <div style="color:#22863a">+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pll-&gt;ss_conf&nbsp;=&nbsp;*ss_conf;</b></div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;div_ctl0&nbsp;=&nbsp;readl_relaxed(pll-&gt;base&nbsp;+&nbsp;DIV_CTL0);</div>
@@ -1562,7 +1562,7 @@ Back to i.MX8M - Linux Integration
       <div style="color:#22863a">+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FIELD_GET(MDIV_MASK,&nbsp;div_ctl0));</b></div>
       <div></div>
       <div class="h-1"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">4 &mdash; on rate change</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">4 &mdash; on rate change</div>
       <div class="text-gray-500">&nbsp;static&nbsp;int&nbsp;clk_pll1443x_set_rate(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;drate,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;prate)</div>
@@ -1572,7 +1572,7 @@ Back to i.MX8M - Linux Integration
       <div style="color:#22863a">+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__clk_pll1443x_set_spread_spectrum(hw,&nbsp;prate,&nbsp;rate.pdiv,&nbsp;rate.mdiv);</b></div>
       <div></div>
       <div class="h-1"></div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">5 &mdash; SSC setup</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">5 &mdash; SSC setup</div>
       <div style="color:#22863a">+static&nbsp;void&nbsp;__clk_pll1443x_set_spread_spectrum(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;parent_rate,</div>
@@ -1635,15 +1635,15 @@ Back to i.MX8M - Linux Integration
     <div class="grid grid-cols-[160px_1fr] gap-x-4 font-mono text-[10px] leading-[1.5] [font-variant-ligatures:none]">
       <div></div>
       <div class="text-gray-500">&nbsp;&amp;clk {</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; the five, restated</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; the five, restated</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigned-clocks = &lt;&amp;clk IMX8MP_CLK_A53_SRC&gt;, &lt;&amp;clk IMX8MP_CLK_A53_CORE&gt;,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk IMX8MP_CLK_NOC&gt;, &lt;&amp;clk IMX8MP_CLK_NOC_IO&gt;, &lt;&amp;clk IMX8MP_CLK_GIC&gt;,</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; plus video PLL1</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; plus video PLL1</div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;&amp;clk IMX8MP_VIDEO_PLL1&gt;</b>;</div>
       <div></div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigned-clock-sscs = &lt;0 0 0&gt;, &lt;0 0 0&gt;, &lt;0 0 0&gt;, &lt;0 0 0&gt;, &lt;0 0 0&gt;,</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; video PLL1 SSC setup</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; video PLL1 SSC setup</div>
       <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;6818 300 CLK_SSC_DOWN_SPREAD&gt;</b>;</div>
       <div></div>
       <div class="text-gray-500">&nbsp;};</div>
