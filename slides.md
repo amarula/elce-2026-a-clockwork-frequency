@@ -870,7 +870,7 @@ i.MX8M Mini/Nano/Plus - Linux Integration
 
 ::body::
 
-<div class="flex flex-col gap-4 pl-[59px] pr-10 justify-center h-full">
+<div class="flex flex-col gap-[22px] pl-[59px] pr-10 justify-center h-full">
 
   <div class="relative rounded-lg border border-gray-300 px-6 pt-4 pb-3">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold tracking-[0.15em] text-gray-700">
@@ -878,20 +878,20 @@ i.MX8M Mini/Nano/Plus - Linux Integration
       <span class="font-mono font-normal tracking-normal text-gray-500">Documentation/devicetree/bindings/clock/imx8m-clock.yaml</span>
     </div>
     <div class="font-mono text-[14px] leading-[1.45] [font-variant-ligatures:none]">
-      <div class="text-gray-400">clock-controller@30380000 {</div>
-      <div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;compatible = "fsl,imx8mm-ccm";</div>
-      <div class="text-gray-400">&nbsp;&nbsp;&nbsp;&nbsp;reg = &lt;0x30380000 0x10000&gt;;</div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;#clock-cells = &lt;1&gt;;</div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;clocks = &lt;&amp;osc_32k&gt;, &lt;&amp;osc_24m&gt;, &lt;&amp;clk_ext1&gt;, &lt;&amp;clk_ext2&gt;,</div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk_ext3&gt;, &lt;&amp;clk_ext4&gt;;</div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;clock-names = "osc_32k", "osc_24m", "clk_ext1", "clk_ext2",</div>
-      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clk_ext3", "clk_ext4";</div>
+      <div class="text-gray-500">clock-controller@30380000 {</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;compatible = "fsl,imx8mm-ccm";</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;reg = &lt;0x30380000 0x10000&gt;;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;#clock-cells = &lt;1&gt;;</div>
+      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;clocks = &lt;&amp;osc_32k&gt;, &lt;&amp;osc_24m&gt;, &lt;&amp;clk_ext1&gt;, &lt;&amp;clk_ext2&gt;,</b></div>
+      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk_ext3&gt;, &lt;&amp;clk_ext4&gt;;</b></div>
+      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;clock-names = "osc_32k", "osc_24m", "clk_ext1", "clk_ext2",</b></div>
+      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clk_ext3", "clk_ext4";</b></div>
       <div class="relative">
-        <div class="text-[#22863a]">+&nbsp;&nbsp;&nbsp;fsl,ssc-clocks = &lt;&amp;clk IMX8MM_AUDIO_PLL1&gt;,</div>
-        <div class="text-[#22863a]">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;&amp;clk IMX8MM_VIDEO_PLL1&gt;</b>;</div>
-        <div class="text-[#22863a]">+&nbsp;&nbsp;&nbsp;fsl,ssc-modfreq-hz = &lt;6818&gt;, <b>&lt;2419&gt;</b>;</div>
-        <div class="text-[#22863a]">+&nbsp;&nbsp;&nbsp;fsl,ssc-modrate-percent = &lt;3&gt;, <b>&lt;7&gt;</b>;</div>
-        <div class="text-[#22863a]">+&nbsp;&nbsp;&nbsp;fsl,ssc-modmethod = "down-spread", <b>"center-spread"</b>;</div>
+        <div class="text-[#22863a]"><b>&nbsp;&nbsp;&nbsp;&nbsp;fsl,ssc-clocks = &lt;&amp;clk IMX8MM_AUDIO_PLL1&gt;,</b></div>
+        <div class="text-[#22863a]"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk IMX8MM_VIDEO_PLL1&gt;;</b></div>
+        <div class="text-[#22863a]"><b>&nbsp;&nbsp;&nbsp;&nbsp;fsl,ssc-modfreq-hz = &lt;6818&gt;, &lt;2419&gt;;</b></div>
+        <div class="text-[#22863a]"><b>&nbsp;&nbsp;&nbsp;&nbsp;fsl,ssc-modrate-percent = &lt;3&gt;, &lt;7&gt;;</b></div>
+        <div class="text-[#22863a]"><b>&nbsp;&nbsp;&nbsp;&nbsp;fsl,ssc-modmethod = "down-spread", "center-spread";</b></div>
         <div v-click="1" class="absolute right-8 top-1/2 -translate-y-1/2 text-[#CC0000] text-[112px] leading-none font-bold">&#10007;</div>
       </div>
     </div>
