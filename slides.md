@@ -1366,9 +1366,9 @@ Generic SSC - One More Call
 ::body::
 
 <div class="flex flex-col pl-[59px] pr-10 pt-[5px] h-[446px]">
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-3 pb-1 mt-2">
+  <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-2 mt-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-conf.c</div>
-    <div class="grid grid-cols-[auto_1fr] gap-x-5 font-mono text-[12px] leading-[1.25] [font-variant-ligatures:none]">
+    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[12px] leading-[1.2] [font-variant-ligatures:none]">
       <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; early in clock setup</div>
       <div class="text-gray-500">int&nbsp;<b>of_clk_set_defaults</b>(struct&nbsp;device_node&nbsp;*node,&nbsp;bool&nbsp;clk_supplier)</div>
       <div></div>
@@ -1419,7 +1419,7 @@ Generic SSC - One More Call
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(hw,&nbsp;<b style="color:#22863a">conf</b>);</div>
     </div>
   </div>
-  <div class="mt-[20px] text-xl font-mono font-semibold">assigned-clock-sscs<span class="text-gray-400">[i]</span><svg viewBox="0 0 72 24" class="inline-block w-[72px] h-[24px] mx-3 align-middle" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg>assigned-clocks<span class="text-gray-400">[i]</span></div>
+  <div class="mt-[16px] text-xl font-mono font-semibold">assigned-clock-sscs<span class="text-gray-400">[i]</span><svg viewBox="0 0 72 24" class="inline-block w-[72px] h-[24px] mx-3 align-middle" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg>assigned-clocks<span class="text-gray-400">[i]</span></div>
 </div>
 
 ---
