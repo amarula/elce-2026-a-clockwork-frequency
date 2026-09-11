@@ -1675,7 +1675,7 @@ Conclusions - EMI Mitigation
       </ul>
     </div>
   </div>
-  <div class="flex items-center justify-center gap-4 mt-auto text-2xl font-semibold -ml-[59px] -mr-12">
+  <div class="flex items-center justify-center gap-4 mt-auto -mb-[8px] text-2xl font-semibold -ml-[59px] -mr-12">
     <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     If supported, try SSC first. Rework only if needed
   </div>
@@ -1776,7 +1776,7 @@ Conclusions - Timeline
       <div class="text-base text-gray-500">Parsing, validation and common handling move into the framework</div>
     </li>
   </ul>
-  <div class="flex items-center justify-center gap-4 mt-auto text-2xl font-semibold -ml-8 -mr-4">
+  <div class="flex items-center justify-center gap-4 mt-auto -mb-[8px] text-2xl font-semibold -ml-8 -mr-4">
     <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     Register the callback and implement it
   </div>
@@ -1814,7 +1814,7 @@ Conclusions - What's Next
       <div class="text-lg text-gray-500">Remember AM33xx/AM43xx with its platform-specific <span class="font-mono text-base">ti,min-div</span> parameter?</div>
     </li>
   </ul>
-  <div class="flex items-center justify-center gap-4 mt-auto text-2xl font-semibold -ml-[27px] -mr-4">
+  <div class="flex items-center justify-center gap-4 mt-auto -mb-[8px] text-2xl font-semibold -ml-[27px] -mr-4">
     <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     Every new platform makes the core stronger
   </div>
