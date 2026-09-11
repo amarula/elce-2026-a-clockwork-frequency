@@ -484,7 +484,7 @@ AM33xx/AM43xx - SSC In Action
 
 <div class="flex flex-col gap-4">
   <div class="text-2xl text-center mb-2">
-    Two panels, two overlays
+    Custom board: two panels, two overlays
   </div>
 
 <div class="grid grid-cols-2 gap-6 items-start pl-[59px] pr-10">
