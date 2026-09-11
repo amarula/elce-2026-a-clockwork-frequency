@@ -292,7 +292,7 @@ Understanding SSC - How Does It Work ?
 
 ::body::
 
-<div class="flex flex-col items-center gap-4">
+<div class="flex flex-col items-center h-[446px]">
   <ul class="list-disc pl-5 text-2xl space-y-3 max-w-4xl">
     <li>The clock frequency is <strong>frequency-modulated</strong> around its nominal value</li>
     <li><strong>Four</strong> parameters configure the spread:
@@ -316,8 +316,11 @@ Understanding SSC - How Does It Work ?
       </ul>
     </li>
     <li>The total energy remains <strong>unchanged</strong></li>
-    <li><strong>Trade-off:</strong> increases clock jitter — not suitable for timing-sensitive peripherals</li>
   </ul>
+  <div class="flex-1 flex items-center justify-center gap-4 text-2xl">
+    <mdi-alert class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    <span><b>Increases clock jitter</b> <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">not suitable for timing-sensitive peripherals</span></span>
+  </div>
 </div>
 
 ---
@@ -339,7 +342,6 @@ Understanding SSC - In Action
   </div>
 </div>
 
-
 ---
 title: Linux SSC Case Studies
 ---
@@ -351,7 +353,6 @@ Linux SSC Case Studies
 ::body::
 
 <Agenda :current="1" />
-
 
 ---
 title: AM33xx/AM43xx - Hardware
@@ -897,7 +898,6 @@ i.MX8M Mini/Nano/Plus - Linux Integration
 
 </div>
 
-
 ---
 title: i.MX8M Mini/Nano/Plus - Linux Integration
 ---
@@ -948,7 +948,6 @@ i.MX8M Mini/Nano/Plus - Linux Integration
   </div>
 
 </div>
-
 
 ---
 title: i.MX8M Mini/Nano/Plus - Linux Integration
@@ -1064,7 +1063,6 @@ i.MX8M Mini/Nano/Plus - Linux Integration
 
 </div>
 
-
 ---
 title: i.MX8M Mini/Nano/Plus - Linux Integration
 ---
@@ -1145,7 +1143,6 @@ i.MX8M Mini/Nano/Plus - Linux Integration
   <div class="text-2xl font-semibold mt-5 pl-2"><span class="text-gray-400">v3</span>&nbsp;8 patches&nbsp;<span class="text-gray-400">&rarr;</span>&nbsp;<span class="text-gray-400">v9</span>&nbsp;23 patches</div>
 
 </div>
-
 
 ---
 title: i.MX8M Mini/Nano/Plus - Linux Integration
@@ -1228,7 +1225,6 @@ i.MX8M Mini/Nano/Plus - Linux Integration
 
 </div>
 
-
 ---
 title: Towards Generic SSC Support
 ---
@@ -1240,7 +1236,6 @@ Towards Generic SSC Support
 ::body::
 
 <Agenda :current="2" />
-
 
 ---
 title: Generic SSC - DT Schema
@@ -1555,7 +1550,6 @@ i.MX95 - Linux Integration
     </div>
   </div>
 </div>
-
 
 ---
 title: Back to i.MX8M - Linux Integration
