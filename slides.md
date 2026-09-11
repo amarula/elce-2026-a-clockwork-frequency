@@ -298,19 +298,19 @@ Understanding SSC - How Does It Work ?
     <li><strong>Four</strong> parameters configure the spread:
       <ul class="list-none pl-0 mt-2 space-y-1">
         <li class="flex items-start gap-3">
-          <mdi-arrow-down-bold class="w-6 h-6 shrink-0 mt-1.5" />
+          <mdi-arrow-up-down-bold class="w-10 h-10 shrink-0 text-[#fdcb0e]" />
           <span>Spreading <strong>depth</strong></span>
         </li>
         <li class="flex items-start gap-3">
-          <mdi-minus-thick class="w-6 h-6 shrink-0 mt-1.5" />
+          <mdi-minus-thick class="w-10 h-10 shrink-0 text-[#fdcb0e]" />
           <span>Modulation <strong>rate</strong></span>
         </li>
         <li class="flex items-start gap-3">
-          <mdi-arrow-down-bold class="w-6 h-6 shrink-0 mt-1.5" />
+          <mdi-arrow-up-down-bold class="w-10 h-10 shrink-0 text-[#fdcb0e]" />
           <span>Modulation <strong>profile</strong>: Triangular, Sinusoidal or Hershey-kiss</span>
         </li>
         <li class="flex items-start gap-3">
-          <mdi-arrow-left-right-bold class="w-6 h-6 shrink-0 mt-1.5" />
+          <mdi-swap-horizontal-bold class="w-10 h-10 shrink-0 text-[#fdcb0e]" />
           <span><strong>Spread type</strong>: Down, Center or Up</span>
         </li>
       </ul>
