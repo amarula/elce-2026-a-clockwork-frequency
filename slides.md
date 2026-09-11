@@ -1576,7 +1576,7 @@ Back to i.MX8M - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writel_relaxed(sscg_ctrl,&nbsp;pll-&gt;base&nbsp;+&nbsp;SSCG_CTRL);</div>
     </div>
   </div>
-  <div class="text-[18px] font-semibold mt-2 pl-2 whitespace-nowrap"><span class="text-gray-400">v9</span>&nbsp;23 patches&nbsp;<span class="text-gray-400">&middot;</span>&nbsp;19 files&nbsp;<span class="text-gray-400">&middot;</span>&nbsp;+1975<svg viewBox="0 0 72 24" class="inline-block w-[54px] h-[18px] mx-3 align-[-0.15em]" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg><span style="color:#22863a"><span class="text-gray-400">v14</span>&nbsp;1 patch&nbsp;<span class="text-gray-400">&middot;</span>&nbsp;1 file&nbsp;<span class="text-gray-400">&middot;</span>&nbsp;+103</span><span class="text-gray-400 ml-3">[ + 3 patches on merged SSC code ]</span></div>
+  <div class="text-[18px] font-semibold mt-2 pl-2 whitespace-nowrap"><span class="text-gray-400">v9</span>&nbsp;23 patches&nbsp;19 files&nbsp;+1975<svg viewBox="0 0 72 24" class="inline-block w-[54px] h-[18px] mx-3 align-[-0.15em]" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg><span style="color:#22863a"><span class="text-gray-400">v14</span>&nbsp;1 patch&nbsp;1 file&nbsp;+103</span><span class="text-gray-400 ml-3">[ + 3 patches on merged SSC code ]</span></div>
 </div>
 
 ---
