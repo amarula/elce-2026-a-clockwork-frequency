@@ -1431,77 +1431,59 @@ title: i.MX95 - Linux Integration
 i.MX95 - Linux Integration
 
 ::body::
-
-<div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-3">
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1">
-    <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-scmi.c</div>
-    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[10px] leading-[1.3] [font-variant-ligatures:none]">
-      <div></div>
-      <div class="text-gray-500">&nbsp;static&nbsp;const&nbsp;struct&nbsp;clk_ops&nbsp;*</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;scmi_clk_ops_alloc(struct&nbsp;device&nbsp;*dev,&nbsp;unsigned&nbsp;long&nbsp;feats_key)</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;{</div>
-      <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;scmi_clk_oem&nbsp;*oem_data&nbsp;=&nbsp;dev_get_drvdata(dev);</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ops&nbsp;=&nbsp;devm_kzalloc(dev,&nbsp;sizeof(*ops),&nbsp;GFP_KERNEL);</div>
-      <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(oem_data&nbsp;&amp;&amp;&nbsp;(feats_key&nbsp;&amp;&nbsp;BIT(SCMI_CLK_EXT_OEM_SSC_SUPPORTED)))</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; runtime registration</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>ops-&gt;set_spread_spectrum&nbsp;=&nbsp;oem_data-&gt;set_spread_spectrum;</b></div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ops;</div>
+<div class="flex flex-col h-[446px] pl-[59px] pr-10 pt-[11px]">
+  <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-1">
+    <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold tracking-[0.15em] text-gray-700">
+      v14
+      <span class="font-mono font-normal tracking-normal text-gray-500">drivers/clk/clk-scmi-oem.c</span>
     </div>
-  </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-6">
-    <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-scmi-oem.c</div>
-    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[10px] leading-[1.3] [font-variant-ligatures:none]">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; OEM table</div>
-      <div style="color:#22863a">+static&nbsp;const&nbsp;struct&nbsp;scmi_clk_oem&nbsp;scmi_clk_oem_imx&nbsp;=&nbsp;{</div>
+    <div class="grid grid-cols-[150px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.55] whitespace-nowrap [font-variant-ligatures:none]">
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.query_ext_oem_feats&nbsp;=&nbsp;scmi_clk_imx_query_oem_feats,</div>
+      <div class="text-gray-500">static&nbsp;const&nbsp;struct&nbsp;scmi_clk_oem&nbsp;scmi_clk_oem_imx&nbsp;=&nbsp;{</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>.set_spread_spectrum</b>&nbsp;=&nbsp;scmi_clk_imx_set_spread_spectrum,</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.query_ext_oem_feats&nbsp;=&nbsp;scmi_clk_imx_query_oem_feats,</div>
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; registration</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<b style="color:#22863a">set_spread_spectrum</b>&nbsp;=&nbsp;<b style="color:#22863a">scmi_clk_imx_set_spread_spectrum</b>,</div>
       <div></div>
-      <div style="color:#22863a">+};</div>
+      <div class="text-gray-500">};</div>
       <div></div>
-      <div class="h-1.5"></div>
+      <div>&nbsp;</div>
+      <div></div>
+      <div class="text-gray-500">static&nbsp;int</div>
       <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; driver callback</div>
-      <div style="color:#22863a">+static&nbsp;int</div>
+      <div class="text-gray-500"><b style="color:#22863a">scmi_clk_imx_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
-      <div style="color:#22863a">+scmi_clk_imx_set_spread_spectrum(struct&nbsp;clk_hw&nbsp;*hw,</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
+      <div class="text-gray-500">{</div>
       <div></div>
-      <div style="color:#22863a">+{</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;scmi_clk&nbsp;*clk&nbsp;=&nbsp;to_scmi_clk(hw);</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;scmi_clk&nbsp;*clk&nbsp;=&nbsp;to_scmi_clk(hw);</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; SSC setup</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/*</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;<b style="color:#22863a">spread_pm</b>&nbsp;=&nbsp;ss_conf-&gt;<b style="color:#22863a">spread_bp</b>&nbsp;/&nbsp;10;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;extConfigValue[7:0]&nbsp;&nbsp;&nbsp;-&nbsp;spread&nbsp;percentage&nbsp;(%)</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(ss_conf-&gt;<b style="color:#22863a">method</b>&nbsp;==&nbsp;CLK_SPREAD_NO)&nbsp;{</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;extConfigValue[23:8]&nbsp;&nbsp;-&nbsp;Modulation&nbsp;Frequency</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;=&nbsp;0;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;extConfigValue[24]&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Enable/Disable</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goto&nbsp;oem_set;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div>
       <div></div>
-      <!-- "/ 10000" is the code as merged in 7.3: spread_bp is permyriad, the field wants percent, so this is a bug -- fixed by patch 1/4 of the i.MX8M series shown two pages on. Quoted as merged on purpose. -->
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;=&nbsp;FIELD_PREP(SCMI_CLOCK_IMX_SS_PERCENTAGE_MASK,&nbsp;<b>ss_conf-&gt;spread_bp</b>&nbsp;/&nbsp;10000);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;=&nbsp;FIELD_PREP(SCMI_CLOCK_IMX_SS_PERCENTAGE_MASK,&nbsp;<b style="color:#22863a">spread_pm</b>);</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;|=&nbsp;FIELD_PREP(SCMI_CLOCK_IMX_SS_MOD_FREQ_MASK,&nbsp;<b>ss_conf-&gt;modfreq_hz</b>);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;|=&nbsp;FIELD_PREP(SCMI_CLOCK_IMX_SS_MOD_FREQ_MASK,&nbsp;ss_conf-&gt;<b style="color:#22863a">modfreq_hz</b>);</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(<b>ss_conf-&gt;method</b>&nbsp;!=&nbsp;CLK_SPREAD_NO)</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;|=&nbsp;SCMI_CLOCK_IMX_SS_ENABLE_MASK;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;|=&nbsp;SCMI_CLOCK_IMX_SS_ENABLE_MASK;</div>
+      <div class="text-gray-500">oem_set:</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;scmi_proto_clk_ops-&gt;config_oem_set(clk-&gt;ph,&nbsp;clk-&gt;id,</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;scmi_proto_clk_ops-&gt;<b>config_oem_set</b>(clk-&gt;ph,&nbsp;clk-&gt;id,</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCMI_CLOCK_CFG_IMX_SSC,</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCMI_CLOCK_CFG_IMX_SSC,&nbsp;val,&nbsp;false);</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val,&nbsp;false);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ret;</div>
+      <div></div>
+      <div class="text-gray-500">}</div>
     </div>
   </div>
 </div>
