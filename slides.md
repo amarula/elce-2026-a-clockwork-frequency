@@ -1761,7 +1761,7 @@ Conclusions - Timeline
       </div>
     </div>
   </div>
-  <div class="pl-[27px] mt-1 text-[24px] font-semibold">Five years. Three vendor spellings. One generic framework.</div>
+  <div class="pl-[27px] mt-1 text-[22px] font-semibold">Five years. Three vendor spellings. One generic framework.</div>
   <ul class="ml-[27px] pl-7 list-disc mt-1 space-y-1">
     <li class="text-lg">
       <b>One binding, vendor-agnostic</b>
