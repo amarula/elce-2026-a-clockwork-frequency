@@ -1691,8 +1691,8 @@ Conclusions - Timeline
 
 ::body::
 
-<div class="flex flex-col pl-8 pr-4 pt-1">
-  <div class="relative mt-3">
+<div class="flex flex-col pl-8 pr-4 pt-1 h-[446px]">
+  <div class="relative mt-0">
     <svg class="absolute left-0 top-0 w-full h-[88px]" viewBox="0 0 1200 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
       <line x1="48" y1="80" x2="1080" y2="80" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
       <line x1="1092" y1="80" x2="1172" y2="80" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" />
@@ -1702,7 +1702,7 @@ Conclusions - Timeline
     </svg>
     <div class="relative grid grid-cols-5">
       <div class="flex flex-col items-center text-center">
-        <div class="h-[72px] flex flex-col justify-end pb-2">
+        <div class="h-[60px] flex flex-col justify-end pb-2">
           <div class="text-base font-semibold">2021</div>
           <div class="text-xs">AM33xx/AM43xx</div>
         </div>
@@ -1716,7 +1716,7 @@ Conclusions - Timeline
         </div>
       </div>
       <div class="flex flex-col items-center text-center">
-        <div class="h-[72px] flex flex-col justify-end pb-2">
+        <div class="h-[60px] flex flex-col justify-end pb-2">
           <div class="text-base font-semibold">2024-25</div>
           <div class="text-xs">i.MX8M v1..v9</div>
         </div>
@@ -1729,7 +1729,7 @@ Conclusions - Timeline
         </div>
       </div>
       <div class="flex flex-col items-center text-center">
-        <div class="h-[72px] flex flex-col justify-end pb-2">
+        <div class="h-[60px] flex flex-col justify-end pb-2">
           <div class="text-base font-semibold">2025</div>
           <div class="text-xs">STM32F4/STM32F7</div>
         </div>
@@ -1742,7 +1742,7 @@ Conclusions - Timeline
         </div>
       </div>
       <div class="flex flex-col items-center text-center">
-        <div class="h-[72px] flex flex-col justify-end pb-2">
+        <div class="h-[60px] flex flex-col justify-end pb-2">
           <div class="text-base font-bold">Aug 2026</div>
           <div class="text-xs font-semibold">Generic SSC &amp; i.MX95</div>
         </div>
@@ -1751,7 +1751,7 @@ Conclusions - Timeline
         <div class="pt-1 font-mono text-[9px] leading-[1.6] text-gray-700 whitespace-nowrap">assigned-clock-sscs</div>
       </div>
       <div class="flex flex-col items-center text-center">
-        <div class="h-[72px] flex flex-col justify-end pb-2">
+        <div class="h-[60px] flex flex-col justify-end pb-2">
           <div class="text-base font-semibold">Sep 2026</div>
           <div class="text-xs">i.MX8M v10..v14</div>
         </div>
@@ -1761,8 +1761,8 @@ Conclusions - Timeline
       </div>
     </div>
   </div>
-  <div class="pl-[27px] mt-4 text-[24px] font-semibold">Five years. Three vendor spellings. One generic framework.</div>
-  <ul class="ml-[27px] pl-7 list-disc mt-2 space-y-2">
+  <div class="pl-[27px] mt-2 text-[24px] font-semibold">Five years. Three vendor spellings. One generic framework.</div>
+  <ul class="ml-[27px] pl-7 list-disc mt-1 space-y-1">
     <li class="text-lg">
       <b>One binding, vendor-agnostic</b>
       <div class="text-base text-gray-500">The property is now defined once and shared across platforms</div>
@@ -1776,6 +1776,10 @@ Conclusions - Timeline
       <div class="text-base text-gray-500">Parsing, validation and common handling move into the framework</div>
     </li>
   </ul>
+  <div class="flex items-center justify-center gap-4 mt-auto text-2xl font-semibold">
+    <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    Register the callback and implement it
+  </div>
 </div>
 
 ---
