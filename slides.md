@@ -293,7 +293,7 @@ Understanding SSC - How Does It Work ?
 ::body::
 
 <div class="flex flex-col items-center h-[446px]">
-  <ul class="list-disc pl-5 text-2xl space-y-3 max-w-4xl">
+  <ul class="list-disc pl-5 mt-[23px] text-2xl space-y-3 max-w-4xl">
     <li>The clock frequency is <strong>frequency-modulated</strong> around its nominal value</li>
     <li><strong>Four</strong> parameters configure the spread:
       <ul class="list-none pl-0 mt-2 space-y-1">
@@ -317,7 +317,7 @@ Understanding SSC - How Does It Work ?
     </li>
     <li>The total energy remains <strong>unchanged</strong></li>
   </ul>
-  <div class="flex-1 flex items-center justify-center gap-4 text-2xl">
+  <div class="mt-auto flex items-center justify-center gap-4 text-2xl">
     <mdi-alert class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     <span><b>Increases clock jitter</b> <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">not suitable for timing-sensitive peripherals</span></span>
   </div>
