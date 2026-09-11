@@ -1649,7 +1649,7 @@ Conclusions - EMI Mitigation
 
 ::body::
 
-<div class="flex flex-col pl-[59px] pr-12 pt-2">
+<div class="flex flex-col pl-[59px] pr-12 pt-2 h-[446px]">
   <div class="grid grid-cols-2 gap-12">
     <div class="flex flex-col items-center">
       <div class="text-3xl font-semibold mb-3">Rework the board</div>
@@ -1675,7 +1675,7 @@ Conclusions - EMI Mitigation
       </ul>
     </div>
   </div>
-  <div class="flex items-center justify-center gap-4 mt-3 text-2xl font-semibold">
+  <div class="flex items-center justify-center gap-4 mt-auto text-2xl font-semibold">
     <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     If supported, try SSC first. Rework only if needed
   </div>
