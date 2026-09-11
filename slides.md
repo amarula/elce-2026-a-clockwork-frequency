@@ -1286,7 +1286,7 @@ Generic SSC - One More Callback
 
 ::body::
 
-<div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-3">
+<div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-[8px]">
   <div class="relative rounded-lg border border-gray-300 px-4 py-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
       <span class="inline-block rounded-full bg-[#22863a]" style="width: 0.8em; height: 0.8em; position: relative; top: 0.02em; margin-right: 0.15em"></span>
@@ -1307,49 +1307,50 @@ Generic SSC - One More Callback
       <div class="text-sm whitespace-nowrap"><span class="text-gray-500">reviewers</span> <b>Brian Masney</b>, <b>Sebin Francis</b>, <b>Cristian Marussi</b></div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-7">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[24px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">include/linux/clk-provider.h</div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[10.5px] leading-[1.45] [font-variant-ligatures:none]">
+    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.35] [font-variant-ligatures:none]">
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; SSC parameters</div>
-      <div style="color:#22863a">+struct&nbsp;clk_spread_spectrum&nbsp;{</div>
+      <div class="text-gray-500">struct&nbsp;<b style="color:#22863a">clk_spread_spectrum</b>&nbsp;{</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;<b>modfreq_hz</b>;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;<b style="color:#22863a">modfreq_hz</b>;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;<b>spread_bp</b>;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;<b style="color:#22863a">spread_bp</b>;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enum&nbsp;clk_ssc_method&nbsp;<b>method</b>;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enum&nbsp;clk_ssc_method&nbsp;<b style="color:#22863a">method</b>;</div>
       <div></div>
-      <div style="color:#22863a">+};</div>
+      <div class="text-gray-500">};</div>
       <div></div>
       <div class="h-4"></div>
       <div></div>
-      <div class="text-gray-500">&nbsp;struct&nbsp;clk_ops&nbsp;{</div>
+      <div class="text-gray-500">struct&nbsp;<b>clk_ops</b>&nbsp;{</div>
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; driver callback</div>
-      <!-- clk-provider.h has two tabs between "int" and the pointer; one is kept here for width, and the continuation line is re-aligned under "struct clk_hw" to match. -->
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<b>set_spread_spectrum</b>)(struct&nbsp;clk_hw&nbsp;*hw,</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<b style="color:#22863a">set_spread_spectrum</b>)(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;};</div>
+      <div class="text-gray-500">};</div>
       <div></div>
       <div class="h-4"></div>
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; core API</div>
-      <div style="color:#22863a">+int&nbsp;<b>clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
+      <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-7">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[24px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk.c</div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[10.5px] leading-[1.45] [font-variant-ligatures:none]">
+    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.35] [font-variant-ligatures:none]">
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; core</div>
-      <div style="color:#22863a">+int&nbsp;<b>clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
+      <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
-      <div style="color:#22863a">+{</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
+      <div></div>
+      <div class="text-gray-500">{</div>
       <div class="ml-[58px] text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">to</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(core-&gt;ops-&gt;set_spread_spectrum)</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>)</div>
       <div class="ml-[80px] text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">driver</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;<b>core-&gt;ops-&gt;set_spread_spectrum(hw,&nbsp;ss_conf)</b>;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>(hw,&nbsp;ss_conf);</div>
     </div>
   </div>
 </div>
