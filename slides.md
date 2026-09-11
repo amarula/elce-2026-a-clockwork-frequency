@@ -1816,7 +1816,7 @@ Conclusions - What's Next
   </ul>
   <div class="flex items-center justify-center gap-4 mt-auto text-2xl font-semibold">
     <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
-    Every new implementation makes the core stronger
+    Every new platform makes the core stronger
   </div>
 </div>
 
