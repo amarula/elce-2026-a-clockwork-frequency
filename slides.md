@@ -1693,7 +1693,7 @@ Conclusions - Timeline
 
 <div class="flex flex-col pl-8 pr-4 pt-1 h-[446px]">
   <div class="relative mt-0">
-    <svg class="absolute left-0 top-0 w-full h-[88px]" viewBox="0 0 1200 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
+    <svg class="absolute left-0 -top-[12px] w-full h-[88px]" viewBox="0 0 1200 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
       <line x1="48" y1="80" x2="1080" y2="80" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" />
       <line x1="1092" y1="80" x2="1172" y2="80" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" />
       <polyline points="1170,73 1180,80 1170,87" stroke="#9ca3af" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
