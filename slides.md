@@ -1649,11 +1649,11 @@ Conclusions - EMI Mitigation
 
 ::body::
 
-<div class="flex flex-col pl-[59px] pr-12 pt-2 h-[446px]">
+<div class="flex flex-col pl-[59px] pr-12 pt-0 h-[446px]">
   <div class="grid grid-cols-2 gap-12">
     <div class="flex flex-col items-center">
       <div class="text-3xl font-semibold mb-3">Rework the board</div>
-      <img src="./assets/tux-hw-rework.png" class="h-[180px] w-auto" alt="Cartoon Tux in a yellow hard hat soldering a green circuit board at a workbench, magnifier lamp over the board" />
+      <img src="./assets/tux-hw-rework.png" class="h-[172px] w-auto" alt="Cartoon Tux in a yellow hard hat soldering a green circuit board at a workbench, magnifier lamp over the board" />
       <ul class="list-disc pl-5 text-lg text-gray-600 mt-2 space-y-1">
         <li>a new redesign cycle
           <ul class="list-[circle] pl-5 text-base space-y-0.5">
@@ -1667,7 +1667,7 @@ Conclusions - EMI Mitigation
     </div>
     <div class="flex flex-col items-center">
       <div class="text-3xl font-semibold mb-3">Enable SSC</div>
-      <img src="./assets/tux-beethoven-ssc.png" class="h-[180px] w-auto rounded-lg" alt="Cartoon Tux as Beethoven, wild grey hair and red scarf, conducting with a baton in front of a screen showing a square wave whose period visibly varies" />
+      <img src="./assets/tux-beethoven-ssc.png" class="h-[172px] w-auto rounded-lg" alt="Cartoon Tux as Beethoven, wild grey hair and red scarf, conducting with a baton in front of a screen showing a square wave whose period visibly varies" />
       <ul class="list-disc pl-5 text-lg text-gray-600 mt-2 space-y-1">
         <li>embedded in many PLLs of modern SoCs</li>
         <li>a generic framework in Linux since 7.3</li>
@@ -1761,7 +1761,7 @@ Conclusions - Timeline
       </div>
     </div>
   </div>
-  <div class="pl-[27px] mt-2 text-[24px] font-semibold">Five years. Three vendor spellings. One generic framework.</div>
+  <div class="pl-[27px] mt-1 text-[24px] font-semibold">Five years. Three vendor spellings. One generic framework.</div>
   <ul class="ml-[27px] pl-7 list-disc mt-1 space-y-1">
     <li class="text-lg">
       <b>One binding, vendor-agnostic</b>
@@ -1792,8 +1792,8 @@ Conclusions - What's Next
 
 ::body::
 
-<div class="flex flex-col pl-[27px] pr-4 h-[446px] pt-1">
-  <ul class="pl-7 list-disc space-y-2">
+<div class="flex flex-col pl-[27px] pr-4 h-[446px] pt-0">
+  <ul class="pl-7 list-disc space-y-1.5">
     <li class="text-2xl">
       <b>Support your platform</b>
       <div class="text-lg text-gray-500">Minimal effort</div>
