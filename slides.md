@@ -504,7 +504,7 @@ AM33xx/AM43xx - Custom Board
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vback-porch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;23&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vfront-porch&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;22&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync-len&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;10&gt;;</div>
-      <div><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clock-frequency&nbsp;=&nbsp;&lt;33000000&gt;;</b></div>
+      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clock-frequency&nbsp;=&nbsp;&lt;33000000&gt;;</b></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hsync-active&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;0&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync-active&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;0&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</div>
@@ -537,7 +537,7 @@ AM33xx/AM43xx - Custom Board
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vback-porch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;15&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vfront-porch&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;13&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync-len&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;10&gt;;</div>
-      <div><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clock-frequency&nbsp;=&nbsp;&lt;40000000&gt;;</b></div>
+      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clock-frequency&nbsp;=&nbsp;&lt;40000000&gt;;</b></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hsync-active&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;0&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync-active&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&lt;0&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</div>
