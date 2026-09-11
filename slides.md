@@ -1992,6 +1992,13 @@ Resources
       <div><a href="https://lore.kernel.org/r/20260612-clk-v10-v10-0-eb92484eda38@nxp.com" class="text-blue-500 underline !border-b-0">lore.kernel.org/r/20260612-clk-v10-v10-0-eb92484eda38@nxp.com</a></div>
     </div>
   </div>
+  <div>
+    <div class="text-lg font-semibold">This talk</div>
+    <div class="grid grid-cols-[68px_1fr] gap-x-2 font-mono text-[10.5px] leading-[1.4] mt-1">
+      <div class="text-gray-500">GitHub</div>
+      <div><a href="https://github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem" class="text-blue-500 underline !border-b-0">github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem</a></div>
+    </div>
+  </div>
 </div>
 
 ---
