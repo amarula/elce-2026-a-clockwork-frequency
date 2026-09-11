@@ -387,7 +387,7 @@ AM33xx/AM43xx - Linux Integration
 
 ::body::
 
-<div class="flex flex-col gap-3 pl-[59px] pr-10 pt-[6px]">
+<div class="flex flex-col gap-3 pl-[59px] pr-10 pt-[7px] h-[446px]">
   <div class="relative rounded-lg border border-gray-300 px-4 py-0.5 mb-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
     <span class="inline-block rounded-full bg-[#3AA83A]" style="width: 0.8em; height: 0.8em; position: relative; top: 0.02em; margin-right: 0.15em"></span>
@@ -423,69 +423,51 @@ AM33xx/AM43xx - Linux Integration
     </div>
   </div>
 
-  <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-1">
-  <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
-    <span class="font-mono normal-case font-normal tracking-normal text-gray-500">drivers/clk/ti/dpll.c</span>
-  </div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[9px] leading-[1.22] [font-variant-ligatures:none]">
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; M, N calculation</div>
-      <div class="text-gray-500">&nbsp;static&nbsp;void&nbsp;__init&nbsp;of_ti_dpll_setup(struct&nbsp;device_node&nbsp;*node,</div>
-      <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!of_property_read_u32(node,&nbsp;<b>"ti,min-div"</b>,&nbsp;&amp;min_div)&nbsp;&amp;&amp;</div>
-      <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min_div&nbsp;&gt;&nbsp;dd-&gt;min_divider)</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;{</div>
-      <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; force min divider</div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>dd-&gt;min_divider</b>&nbsp;=&nbsp;min_div;</div>
-    </div>
-  </div>
-
-  <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-1">
+  <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-1 mt-2">
   <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
     <span class="font-mono normal-case font-normal tracking-normal text-gray-500">drivers/clk/ti/dpll3xxx.c</span>
   </div>
-    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[9px] leading-[1.22] [font-variant-ligatures:none]">
+    <div class="grid grid-cols-[165px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.27] [font-variant-ligatures:none]">
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">1 &mdash; on rate change</div>
-      <div class="text-gray-500">&nbsp;int&nbsp;omap3_noncore_dpll_set_rate(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;rate,</div>
+      <div class="text-gray-500">int&nbsp;<b>omap3_noncore_dpll_set_rate</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;rate,</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;parent_rate)</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;parent_rate)</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;{</div>
+      <div class="text-gray-500">{</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;<b>omap3_noncore_dpll_program</b>(clk,&nbsp;freqsel);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;<b>omap3_noncore_dpll_program</b>(clk,&nbsp;freqsel);</div>
       <div></div>
       <div class="h-1.5"></div>
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">2 &mdash; after M, N calculation</div>
-      <div class="text-gray-500">&nbsp;static&nbsp;int&nbsp;<b>omap3_noncore_dpll_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk,&nbsp;u16&nbsp;freqsel)</div>
+      <div class="text-gray-500">static&nbsp;int&nbsp;<b>omap3_noncore_dpll_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk,&nbsp;u16&nbsp;freqsel)</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;{</div>
+      <div class="text-gray-500">{</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(dd-&gt;ssc_enable_mask)</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(dd-&gt;ssc_enable_mask)</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>omap3_noncore_dpll_ssc_program(clk)</b>;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(clk);</div>
       <div></div>
       <div class="h-1.5"></div>
       <div class="text-[8.5px] font-semibold uppercase tracking-[0.15em] text-gray-400 whitespace-nowrap">3 &mdash; SSC setup</div>
-      <div style="color:#22863a">+static&nbsp;void&nbsp;omap3_noncore_dpll_ssc_program(struct&nbsp;clk_hw_omap&nbsp;*clk)</div>
+      <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk)</div>
       <div></div>
-      <div style="color:#22863a">+{</div>
+      <div class="text-gray-500">{</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl&nbsp;|=&nbsp;dd-&gt;ssc_enable_mask;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl&nbsp;|=&nbsp;dd-&gt;ssc_enable_mask;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(<b>dd-&gt;ssc_downspread</b>)</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(dd-&gt;<b style="color:#22863a">ssc_downspread</b>)</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl&nbsp;|=&nbsp;dd-&gt;ssc_downspread_mask;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl&nbsp;|=&nbsp;dd-&gt;ssc_downspread_mask;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mod_freq_divider&nbsp;=</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mod_freq_divider&nbsp;=</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ref_rate&nbsp;/&nbsp;<b>dd-&gt;last_rounded_n</b>)&nbsp;/&nbsp;(4&nbsp;*&nbsp;<b>dd-&gt;ssc_modfreq</b>);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ref_rate&nbsp;/&nbsp;dd-&gt;<b style="color:#22863a">last_rounded_n</b>)&nbsp;/&nbsp;(4&nbsp;*&nbsp;dd-&gt;<b style="color:#22863a">ssc_modfreq</b>);</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deltam_step&nbsp;=&nbsp;<b>dd-&gt;last_rounded_m</b>&nbsp;*&nbsp;<b>dd-&gt;ssc_deltam</b>;</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deltam_step&nbsp;=&nbsp;dd-&gt;<b style="color:#22863a">last_rounded_m</b>&nbsp;*&nbsp;dd-&gt;<b style="color:#22863a">ssc_deltam</b>;</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ti_clk_ll_ops-&gt;clk_writel(v,&nbsp;&amp;<b>dd-&gt;ssc_deltam_reg</b>);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ti_clk_ll_ops-&gt;clk_writel(v,&nbsp;&amp;dd-&gt;ssc_deltam_reg);</div>
       <div></div>
-      <div style="color:#22863a">+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ti_clk_ll_ops-&gt;clk_writel(ctrl,&nbsp;&amp;<b>dd-&gt;control_reg</b>);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ti_clk_ll_ops-&gt;clk_writel(ctrl,&nbsp;&amp;dd-&gt;control_reg);</div>
     </div>
   </div>
 </div>
