@@ -1498,7 +1498,7 @@ Back to i.MX8M - Linux Integration
 
 ::body::
 
-<div class="flex flex-col pl-[59px] pr-10 pt-[1px] h-[446px]">
+<div class="flex flex-col pl-[59px] pr-10 pt-[1px] h-[449px]">
   <div class="relative rounded-lg border border-gray-300 px-4 py-1">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
       <span class="inline-block rounded-full bg-white border-[#B45309]" style="width: 0.8em; height: 0.8em; border-width: 2.5px; position: relative; top: 0.02em; margin-right: 0.15em"></span>
@@ -1514,10 +1514,13 @@ Back to i.MX8M - Linux Integration
         <span><b>Under review</b></span>
         <span class="text-gray-400">&middot;</span>
       </div>
-      <div class="text-base"><span class="text-gray-500">author</span> <b>Dario Binacchi</b></div>
+      <div>
+        <div class="text-base"><span class="text-gray-500">author</span> <b>Dario Binacchi</b></div>
+        <div class="text-sm whitespace-nowrap"><span class="text-gray-500">reviewers</span> <b>Peng Fan</b>, <b>Abel Vesa</b></div>
+      </div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-2 mt-4 flex-1 flex flex-col">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-2 mt-[13px] flex-1 flex flex-col">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/imx/clk-pll14xx.c</div>
     <div class="flex-1 flex flex-col justify-between font-mono text-[11px] leading-[1.1] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="grid grid-cols-[150px_1fr] gap-x-5">
@@ -1581,7 +1584,7 @@ Back to i.MX8M - Linux Integration
       </div>
     </div>
   </div>
-  <div class="text-[18px] font-semibold mt-[20px] pl-2 whitespace-nowrap"><span class="text-gray-400">v9</span>&nbsp;23 patches&nbsp;19 files&nbsp;+1975<svg viewBox="0 0 72 24" class="inline-block w-[54px] h-[18px] mx-3 align-[-0.15em]" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg><span style="color:#22863a"><span class="text-gray-400">v14</span>&nbsp;1 patch&nbsp;1 file&nbsp;+103</span><span class="text-gray-400 ml-3">[ + 3 patches on merged SSC code ]</span></div>
+  <div class="text-[18px] font-semibold mt-[14px] pl-2 whitespace-nowrap"><span class="text-gray-400">v9</span>&nbsp;23 patches&nbsp;19 files&nbsp;+1975<svg viewBox="0 0 72 24" class="inline-block w-[54px] h-[18px] mx-3 align-[-0.15em]" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg><span style="color:#22863a"><span class="text-gray-400">v14</span>&nbsp;1 patch&nbsp;1 file&nbsp;+103</span><span class="text-gray-400 ml-3">[ + 3 patches on merged SSC code ]</span></div>
 </div>
 
 ---
