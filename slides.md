@@ -758,14 +758,14 @@ STM32F4/STM32F7 - Design Notes
           <div class="text-xs uppercase tracking-wider text-gray-500">AM33xx/AM43xx</div>
           <div class="text-xs uppercase tracking-wider text-gray-500">STM32F4/STM32F7</div>
           <div></div>
-          <div>Spreading depth</div>
-          <div class="font-mono whitespace-nowrap">ti,ssc-deltam</div>
-          <div class="font-mono whitespace-nowrap">st,ssc-moddepth-permyriad</div>
-          <div class="whitespace-nowrap text-xs">&#9888;&#65039; Different name/unit</div>
           <div>Modulation rate</div>
           <div class="font-mono whitespace-nowrap">ti,ssc-modfreq-hz</div>
           <div class="font-mono whitespace-nowrap">st,ssc-modfreq-hz</div>
           <div class="whitespace-nowrap text-xs">&#9989; Same name</div>
+          <div>Spreading depth</div>
+          <div class="font-mono whitespace-nowrap">ti,ssc-deltam</div>
+          <div class="font-mono whitespace-nowrap">st,ssc-moddepth-permyriad</div>
+          <div class="whitespace-nowrap text-xs">&#9888;&#65039; Different name/unit</div>
           <div>Spread type</div>
           <div class="font-mono whitespace-nowrap">ti,ssc-downspread</div>
           <div class="font-mono whitespace-nowrap">st,ssc-modmethod</div>
