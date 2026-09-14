@@ -13,8 +13,12 @@ from plot_05_victim_band import (
 # sitting on the non-spread line, so it adds nothing here and its 85-115 MHz
 # span would force a window wide enough to shrink the overlap to nothing.
 #
-# Dropping it lets the window close to 24 MHz and makes the overlap ~4% of the
-# chart, with no change to the band definitions used on the other slides.
+# Dropping it let the window close to 24 MHz and made the overlap ~4% of the
+# chart. On 2026-09-14 the window closed further, to 10 MHz (96-106), so that
+# the overlapped sliver is 10% of the chart and reads at a glance from the
+# room: Device B's far edge (118 MHz) is now outside the view and its
+# dimension line runs off to the right. No change to the band definitions
+# used on the other slides.
 F0 = 100
 DEVICE_B_LO, DEVICE_B_HI = DEVICE_B
 
@@ -27,11 +31,11 @@ for spine in ax.spines.values():
 ax.grid(True, linestyle=":", color="black", alpha=0.55, linewidth=0.9)
 ax.tick_params(axis="both", labelsize=11)
 
-xmin, xmax = 96, 120
+xmin, xmax = 96, 106
 ymax = 14
 ax.set_xlim(xmin, xmax)
 ax.set_ylim(FLOOR, ymax)
-ax.set_xticks([96, 100, 104, 108, 112, 116, 120])
+ax.set_xticks([96, 98, 100, 102, 104, 106])
 
 freqs = np.linspace(xmin, xmax, 2000)
 ax.plot(freqs, np.full_like(freqs, FLOOR), color=BLUE, linewidth=2.5)
@@ -55,9 +59,11 @@ ax.plot([F0 - hw, F0 - hw, F0 + hw, F0 + hw], [FLOOR, level, level, FLOOR],
 # is where slide 9 started. The height difference *is* the peak reduction.
 ax.vlines(F0, FLOOR, 0, color=BLUE, linewidth=3.5)
 
-# Device B: at this scale the whole dimension line fits -- both caps, the arrow
-# and both frequency labels, exactly as on the previous slides.
-dimension_line(ax, DEVICE_B_LO, DEVICE_B_HI, 8, "Device B", GREEN)
+# Device B: the window is too narrow for its far edge (118 MHz), so the
+# dimension line gets one tick cap and a single arrowhead trailing off the
+# view, the standard "runs off" variant, instead of a false second edge.
+dimension_line(ax, DEVICE_B_LO, DEVICE_B_HI, 8, "Device B", GREEN,
+               runs_off_to=xmax)
 
 # The slice of spread energy that now falls inside Device B's band. Same
 # fill/outline discipline as the band: one hex, translucent fill, bold outline.
