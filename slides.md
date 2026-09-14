@@ -275,11 +275,15 @@ Understanding SSC - A New Issue ?
 
 ::body::
 
-<div class="flex flex-col items-center gap-6">
-  <div class="text-2xl text-center max-w-3xl">
+<div class="flex flex-col items-center gap-6 h-[446px]">
+  <div class="text-2xl text-center max-w-3xl mt-[23px]">
     Energy can now reach previously unaffected frequency bands
   </div>
-  <img src="./assets/victim-band-zoom.png" class="max-w-2xl rounded shadow" alt="Zoomed view from 96 to 120 MHz: the fundamental now spreads from 98 to 102 MHz, and the slice from 101 to 102 MHz falls inside Device B's 101-118 MHz operating band, which the single non-spread line at 100 MHz never touched" />
+  <img src="./assets/victim-band-zoom.png" class="max-h-[300px] w-auto rounded shadow" alt="Zoomed view from 96 to 120 MHz: the fundamental now spreads from 98 to 102 MHz, and the slice from 101 to 102 MHz falls inside Device B's 101-118 MHz operating band, which the single non-spread line at 100 MHz never touched" />
+  <div class="mt-auto flex items-center justify-center gap-4 text-2xl font-semibold">
+    <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    Don't just enable it: tune the spread
+  </div>
 </div>
 
 ---
