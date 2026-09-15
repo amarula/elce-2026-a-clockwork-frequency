@@ -1665,7 +1665,7 @@ Conclusions - EMI Mitigation
   <div class="grid grid-cols-2 gap-12">
     <div class="flex flex-col items-center">
       <div class="text-3xl font-semibold mb-3">Rework the board</div>
-      <img src="./assets/tux-hw-rework.png" class="h-[172px] w-auto" alt="Cartoon Tux in a yellow hard hat soldering a green circuit board at a workbench, magnifier lamp over the board" />
+      <img src="./assets/tux-hw-rework.png" class="h-[134px] w-auto" alt="Cartoon Tux in a yellow hard hat soldering a green circuit board at a workbench, magnifier lamp over the board" />
       <ul class="list-disc pl-5 text-lg text-gray-600 mt-2 space-y-1">
         <li>a new redesign cycle
           <ul class="list-[circle] pl-5 text-base space-y-0.5">
@@ -1679,11 +1679,15 @@ Conclusions - EMI Mitigation
     </div>
     <div class="flex flex-col items-center">
       <div class="text-3xl font-semibold mb-3">Enable SSC</div>
-      <img src="./assets/tux-beethoven-ssc.png" class="h-[172px] w-auto rounded-lg" alt="Cartoon Tux as Beethoven, wild grey hair and red scarf, conducting with a baton in front of a screen showing a square wave whose period visibly varies" />
+      <img src="./assets/tux-beethoven-ssc.png" class="h-[134px] w-auto rounded-lg" alt="Cartoon Tux as Beethoven, wild grey hair and red scarf, conducting with a baton in front of a screen showing a square wave whose period visibly varies" />
       <ul class="list-disc pl-5 text-lg text-gray-600 mt-2 space-y-1">
         <li>embedded in many PLLs of modern SoCs</li>
         <li>a generic framework in Linux since 7.3</li>
         <li>requirements change? retune the configuration, not the board</li>
+        <li class="list-none relative">
+          <mdi-alert class="absolute -left-[23px] top-[7px] w-4 h-4 text-[#fdcb0e]" />
+          more jitter: not for timing-sensitive peripherals
+        </li>
       </ul>
     </div>
   </div>
