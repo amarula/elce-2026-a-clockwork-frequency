@@ -1684,7 +1684,7 @@ Conclusions - EMI Mitigation
         <li>embedded in many PLLs of modern SoCs</li>
         <li>a generic framework in Linux since 7.3</li>
         <li>requirements change? retune the configuration, not the board</li>
-        <li><b>more jitter</b>: not for timing-sensitive peripherals</li>
+        <li>more jitter: not for timing-sensitive peripherals</li>
       </ul>
     </div>
   </div>
