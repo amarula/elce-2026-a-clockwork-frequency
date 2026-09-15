@@ -376,7 +376,7 @@ AM33xx/AM43xx - Hardware
   <img src="./assets/am33xx-dpll-ssc.png" class="max-h-[320px] w-auto self-center" alt="Block diagram. Along the top, two lines saying that M is CM_CLKSEL.DPLL_MULT and N is CM_CLKSEL.DPLL_DIV plus one. Below them a reference clock enters a PLL whose output is the input times M over N, and leaves as the output clock. Under the PLL an SSC block drives an arrow back up into it, so the modulation happens inside the PLL rather than after it; the arrow is broken by an open switch labelled CM_CLKMODE.SSC_EN. The SSC block lists the same four knobs as the earlier parameter slide, each against the register that carries it: depth in CM_SSC_DELTAMSTEP, rate in CM_SSC_MODFREQDIV, type in CM_CLKMODE.SSC_DOWNSPREAD where 0 is center spread and 1 is down spread, and profile greyed out because it is not configurable: it is triangular, fixed in silicon. Beside the SSC block, a note reads: two dedicated registers and two control bits" />
 
   <div class="flex items-center justify-center gap-4 text-2xl">
-    <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    <mdi-alert class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     <span>Enabling SSC restricts the valid range of the PLL multiplier (M)</span>
   </div>
 </div>
