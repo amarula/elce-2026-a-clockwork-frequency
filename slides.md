@@ -1684,10 +1684,7 @@ Conclusions - EMI Mitigation
         <li>embedded in many PLLs of modern SoCs</li>
         <li>a generic framework in Linux since 7.3</li>
         <li>requirements change? retune the configuration, not the board</li>
-        <li class="list-none relative">
-          <mdi-alert class="absolute -left-[23px] top-[7px] w-4 h-4 text-[#fdcb0e]" />
-          more jitter: not for timing-sensitive peripherals
-        </li>
+        <li><b>but</b> more jitter: not for timing-sensitive peripherals</li>
       </ul>
     </div>
   </div>
