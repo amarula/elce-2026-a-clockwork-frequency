@@ -886,10 +886,14 @@ i.MX8M Mini/Nano/Plus - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;compatible = "fsl,imx8mm-ccm";</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;reg = &lt;0x30380000 0x10000&gt;;</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;#clock-cells = &lt;1&gt;;</div>
-      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;clocks = &lt;&amp;osc_32k&gt;, &lt;&amp;osc_24m&gt;, &lt;&amp;clk_ext1&gt;, &lt;&amp;clk_ext2&gt;,</b></div>
-      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk_ext3&gt;, &lt;&amp;clk_ext4&gt;;</b></div>
-      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;clock-names = "osc_32k", "osc_24m", "clk_ext1", "clk_ext2",</b></div>
-      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clk_ext3", "clk_ext4";</b></div>
+      <div class="relative w-fit" :class="$clicks >= 2 ? 'font-bold' : ''">
+        <div v-click="2" class="absolute -inset-x-3 -inset-y-[3px] rounded-md border-2 border-[#fdcb0e] pointer-events-none"></div>
+        <div v-click="2" class="absolute left-full top-1/2 -translate-y-1/2 ml-7 whitespace-nowrap font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">the clocks it consumes</div>
+        <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;clocks = &lt;&amp;osc_32k&gt;, &lt;&amp;osc_24m&gt;, &lt;&amp;clk_ext1&gt;, &lt;&amp;clk_ext2&gt;,</div>
+        <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk_ext3&gt;, &lt;&amp;clk_ext4&gt;;</div>
+        <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;clock-names = "osc_32k", "osc_24m", "clk_ext1", "clk_ext2",</div>
+        <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clk_ext3", "clk_ext4";</div>
+      </div>
       <div class="relative">
         <div class="text-[#22863a]"><b>&nbsp;&nbsp;&nbsp;&nbsp;fsl,ssc-clocks = &lt;&amp;clk IMX8MM_AUDIO_PLL1&gt;,</b></div>
         <div class="text-[#22863a]"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk IMX8MM_VIDEO_PLL1&gt;;</b></div>
