@@ -1208,6 +1208,38 @@ Towards Generic SSC Support
 <Agenda :current="2" />
 
 ---
+title: Generic SSC - Overview
+---
+
+::title::
+
+Generic SSC - Overview
+
+::body::
+
+<div class="h-[446px] pt-[58px] flex justify-center">
+  <div class="relative w-[700px] h-[330px]">
+  <svg class="absolute left-0 top-0" width="700" height="330" viewBox="0 0 700 330" fill="none" stroke="#9ca3af" stroke-width="2">
+    <path d="M305 60 V96 H110 V134" />
+    <path d="M305 96 H500 V134" />
+    <path d="M500 194 V232 H370 V270" />
+    <path d="M500 232 H630 V270" />
+  </svg>
+    <div class="absolute left-[205px] top-0 w-[200px] h-[60px] flex items-center justify-center rounded-lg border-2 border-[#fdcb0e] bg-[#fdcb0e]/15 text-2xl font-semibold">Generic SSC</div>
+    <div class="absolute left-0 top-[134px] w-[220px] h-[60px] flex items-center justify-center gap-3 rounded-lg border border-gray-300 text-2xl font-semibold">
+      <img src="./assets/devicetree-logo.png" class="h-10 w-auto shrink-0" alt="The devicetree.org mark: a chip outline with a small tree of coloured nodes inside" />
+      DT Schema
+    </div>
+    <div class="absolute left-[400px] top-[134px] w-[200px] h-[60px] flex items-center justify-center gap-3 rounded-lg border border-gray-300 text-2xl font-semibold">
+      <logos-linux-tux class="h-9 w-auto shrink-0" />
+      Linux
+    </div>
+    <div class="absolute left-[300px] top-[270px] w-[140px] h-[60px] flex items-center justify-center gap-3 rounded-lg border border-gray-300 text-2xl font-semibold"><mdi-power-plug-outline class="w-9 h-9 text-gray-600 shrink-0" />API</div>
+    <div class="absolute left-[560px] top-[270px] w-[140px] h-[60px] flex items-center justify-center gap-3 rounded-lg border border-gray-300 text-2xl font-semibold"><mdi-cog-outline class="w-9 h-9 text-gray-600 shrink-0" />Core</div>
+  </div>
+</div>
+
+---
 title: Generic SSC - DT Schema
 ---
 
@@ -1285,12 +1317,12 @@ Generic SSC - DT Schema
 </div>
 
 ---
-title: Generic SSC - One More Callback
+title: Generic SSC - Linux API
 ---
 
 ::title::
 
-Generic SSC - One More Callback
+Generic SSC - Linux API
 
 ::body::
 
@@ -1364,12 +1396,12 @@ Generic SSC - One More Callback
 </div>
 
 ---
-title: Generic SSC - One More Call
+title: Generic SSC - Linux Core
 ---
 
 ::title::
 
-Generic SSC - One More Call
+Generic SSC - Linux Core
 
 ::body::
 
