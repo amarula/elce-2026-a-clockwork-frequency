@@ -77,21 +77,26 @@ const tuxBeethoven = new URL('../assets/tux-beethoven-ssc.png', import.meta.url)
       class="absolute right-6 bottom-4 h-44 pointer-events-none select-none"
       alt="Tux dressed as Beethoven conducting, with a square-wave clock signal whose period visibly varies on the music stand" />
 
-    <!-- Footer: the licence line of the theme's cover, and under it the
-         talk's repository (Dario, 2026-09-16: the URL on the first page
-         too, not only in Resources). Two centred lines, not one: the URL
+    <!-- Footer: the talk's repository (Dario, 2026-09-16: the URL on the
+         first page too, not only in Resources) and under it the licence
+         line of the theme's cover -- repository first since 2026-09-17,
+         the same order as the Q&A page's footer, and the same sizes (URL
+         text-sm, licence text-base, icon text-sm; Dario 2026-09-17: as
+         large as the width allows without overpowering the graphics). The
+         block carries pr-[120px] so that, centred, it clears Tux-Beethoven
+         at the right. Two centred lines: the URL
          is 76 characters, and one line would run under Tux-Beethoven at
          the right; at text-sm it still ran under him, so the link is text-xs
          (1100 px wide at 2x, 90 px clear of the cartoon). Same link idiom as
          the website above. -->
-    <div class="text-center text-sm font-light mt-4 space-y-1">
-      <div>Slides under Creative Commons license BY-SA 3.0.</div>
+    <div class="text-center text-base font-light mt-4 space-y-1 pr-[120px]">
       <a href="https://github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem"
         target="_blank" rel="noopener"
-        class="inline-flex items-center gap-1.5 text-xs text-blue-500 underline !border-b-0 font-normal">
-        <mdi-github />
+        class="inline-flex items-center gap-1.5 text-sm text-blue-500 underline !border-b-0 font-normal">
+        <mdi-github class="text-sm" />
         github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem
       </a>
+      <div>Slides under Creative Commons license BY-SA 3.0.</div>
     </div>
   </div>
 </template>
