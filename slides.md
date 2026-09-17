@@ -411,17 +411,19 @@ AM33xx/AM43xx - Linux Integration
     </div>
   </div>
 
-  <div class="relative rounded-lg border border-gray-300 px-4 py-1">
+  <div class="relative rounded-lg border border-gray-300 px-4 py-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
       <span class="font-mono normal-case font-normal tracking-normal text-gray-500 [font-variant-ligatures:none]">Documentation/devicetree/bindings/clock/ti/dpll.txt</span>
     </div>
-    <div class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-0 text-[13px] leading-[1.15] items-baseline">
-      <div class="font-mono">ti,ssc-deltam</div>
+    <div class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-0 text-[14px] leading-[1.4] items-baseline">
+      <div class="font-mono"><b style="color:#22863a">ti,ssc-deltam</b></div>
       <div>spreading depth, in tenths of a percent</div>
-      <div class="font-mono">ti,ssc-modfreq-hz</div>
+      <div class="font-mono"><b style="color:#22863a">ti,ssc-modfreq-hz</b></div>
       <div>modulation rate</div>
-      <div class="font-mono">ti,ssc-downspread</div>
+      <div class="font-mono"><b style="color:#22863a">ti,ssc-downspread</b></div>
       <div>spread type, boolean &mdash; down-spread instead of center</div>
+      <div class="h-2"></div>
+      <div></div>
       <div class="font-mono">ti,min-div</div>
       <div>floor for N, so the rounded M stays in range <span class="text-gray-500">&mdash;</span> <b>not about EMI at all</b></div>
     </div>
@@ -431,28 +433,20 @@ AM33xx/AM43xx - Linux Integration
   <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
     <span class="font-mono normal-case font-normal tracking-normal text-gray-500">drivers/clk/ti/dpll3xxx.c</span>
   </div>
-    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.27] whitespace-nowrap [font-variant-ligatures:none]">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; on rate change</div>
-      <div class="text-gray-500">int&nbsp;<b>omap3_noncore_dpll_set_rate</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;rate,</div>
+    <div class="font-mono text-[14px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none] mt-2 space-y-[8px]">
+      <div class="flex items-center">
+        <span class="text-gray-500"><b>omap3_noncore_dpll_set_rate</b>(hw, rate, parent_rate)</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[16px] mr-1" /><b>omap3_noncore_dpll_program</b>(clk, freqsel)</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-500 flex items-center"><span class="inline-block w-[6ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[16px] mr-1" /><b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(clk)</span>
+      </div>
+    </div>
+    <div class="h-5"></div>
+    <div class="grid grid-cols-[0px_1fr] font-mono text-[14px] leading-[1.32] whitespace-nowrap [font-variant-ligatures:none]">
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;parent_rate)</div>
-      <div></div>
-      <div class="text-gray-500">{</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;<b>omap3_noncore_dpll_program</b>(clk,&nbsp;freqsel);</div>
-      <div></div>
-      <div class="h-1.5"></div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; after M, N calculation</div>
-      <div class="text-gray-500">static&nbsp;int&nbsp;<b>omap3_noncore_dpll_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk,&nbsp;u16&nbsp;freqsel)</div>
-      <div></div>
-      <div class="text-gray-500">{</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(dd-&gt;ssc_enable_mask)</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(clk);</div>
-      <div></div>
-      <div class="h-1.5"></div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; SSC setup</div>
       <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk)</div>
       <div></div>
       <div class="text-gray-500">{</div>
@@ -463,15 +457,11 @@ AM33xx/AM43xx - Linux Integration
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl&nbsp;|=&nbsp;dd-&gt;ssc_downspread_mask;</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mod_freq_divider&nbsp;=</div>
+      <div>&nbsp;</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ref_rate&nbsp;/&nbsp;dd-&gt;<b style="color:#22863a">last_rounded_n</b>)&nbsp;/&nbsp;(4&nbsp;*&nbsp;dd-&gt;<b style="color:#22863a">ssc_modfreq</b>);</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mod_freq_divider&nbsp;=&nbsp;(ref_rate&nbsp;/&nbsp;dd-&gt;<b style="color:#22863a">last_rounded_n</b>)&nbsp;/&nbsp;(4&nbsp;*&nbsp;dd-&gt;<b style="color:#22863a">ssc_modfreq</b>);</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deltam_step&nbsp;=&nbsp;dd-&gt;<b style="color:#22863a">last_rounded_m</b>&nbsp;*&nbsp;dd-&gt;<b style="color:#22863a">ssc_deltam</b>;</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ti_clk_ll_ops-&gt;clk_writel(v,&nbsp;&amp;dd-&gt;ssc_deltam_reg);</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ti_clk_ll_ops-&gt;clk_writel(ctrl,&nbsp;&amp;dd-&gt;control_reg);</div>
     </div>
   </div>
 </div>
@@ -666,7 +656,7 @@ STM32F4/STM32F7 - Linux Integration
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">stm32f4_pll_init_ssc</b>(pll_vco_hw,&nbsp;&amp;ssc_conf);</div>
       <div></div>
-      <div class="h-1.5"></div>
+      <div class="h-6"></div>
       <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; on rate change</div>
       <div class="text-gray-500">static&nbsp;int&nbsp;<b>stm32f4_pll_set_rate</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;rate,</div>
       <div></div>
@@ -678,7 +668,7 @@ STM32F4/STM32F7 - Linux Integration
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">stm32f4_pll_set_ssc</b>(hw,&nbsp;parent_rate,&nbsp;<b style="color:#22863a">n</b>);</div>
       <div></div>
-      <div class="h-1.5"></div>
+      <div class="h-6"></div>
       <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; SSC setup</div>
       <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">stm32f4_pll_set_ssc</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;parent_rate,</div>
       <div></div>
