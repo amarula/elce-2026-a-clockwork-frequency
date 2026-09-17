@@ -2042,13 +2042,6 @@ Resources
       <div><a href="https://lore.kernel.org/r/20260612-clk-v10-v10-0-eb92484eda38@nxp.com" class="text-blue-500 underline !border-b-0">lore.kernel.org/r/20260612-clk-v10-v10-0-eb92484eda38@nxp.com</a></div>
     </div>
   </div>
-  <div>
-    <div class="text-lg font-semibold">This talk</div>
-    <div class="grid grid-cols-[68px_1fr] gap-x-2 font-mono text-[10.5px] leading-[1.4] mt-1">
-      <div class="text-gray-500">GitHub</div>
-      <div><a href="https://github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem" class="text-blue-500 underline !border-b-0">github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem</a></div>
-    </div>
-  </div>
 </div>
 
 ---
@@ -2061,39 +2054,33 @@ Q&amp;A
 
 ::body::
 
-<div class="flex flex-row justify-around items-center h-full pr-6">
-  <div class="flex flex-col justify-center">
-    <div class="text-3xl font-semibold">
-      Thanks for your time
+<div class="flex flex-col h-[446px] pl-[59px] pr-10">
+  <div class="flex flex-row justify-between items-center flex-1 pr-6">
+    <div class="flex flex-col justify-center">
+      <div class="text-4xl font-semibold whitespace-nowrap">
+        SSC support in Linux since 7.3
+      </div>
+      <div class="font-mono text-3xl text-gray-700 mt-5">assigned-clock-sscs</div>
+      <div class="flex flex-col items-start gap-1 mt-20">
+        <a href="mailto:dario.binacchi@amarulasolutions.com" class="inline-flex items-center gap-2 text-lg text-blue-500 underline !border-b-0">
+          <mdi-email />
+          dario.binacchi@amarulasolutions.com
+        </a>
+        <a href="https://www.amarulasolutions.com" class="inline-flex items-center gap-2 text-lg text-blue-500 underline !border-b-0">
+          <mdi-web />
+          www.amarulasolutions.com
+        </a>
+      </div>
     </div>
-    <div class="flex flex-col gap-4 mt-8">
-      <div class="flex items-center gap-4 text-3xl">
-        <mdi-help-circle class="w-9 h-9 text-[#fdcb0e] shrink-0" />
-        Questions?
-      </div>
-      <div class="flex items-center gap-4 text-3xl pl-12 text-gray-700">
-        <mdi-comment-text class="w-9 h-9 text-[#fdcb0e] shrink-0" />
-        Comments?
-      </div>
-      <div class="flex items-center gap-4 text-3xl pl-24 text-gray-500">
-        <mdi-lightbulb-on class="w-9 h-9 text-[#fdcb0e] shrink-0" />
-        Suggestions?
-      </div>
-    </div>
-    <div class="flex flex-col items-start gap-1 mt-12">
-      <a href="mailto:dario.binacchi@amarulasolutions.com" class="inline-flex items-center gap-2 text-lg text-blue-500 underline !border-b-0">
-        <mdi-email />
-        dario.binacchi@amarulasolutions.com
-      </a>
-      <a href="https://www.amarulasolutions.com" class="inline-flex items-center gap-2 text-lg text-blue-500 underline !border-b-0">
-        <mdi-web />
-        www.amarulasolutions.com
-      </a>
+    <div class="shrink-0">
+      <img src="./assets/tux-beethoven-ssc.png" alt="Tux dressed as Beethoven conducting, with a square-wave clock signal whose period visibly varies on the music stand" class="h-[300px] w-auto rounded-lg" />
     </div>
   </div>
-  <div class="flex flex-col justify-between space-y-2">
-    <div>
-      <img src="./assets/tux-beethoven-ssc.png" alt="Cartoon Tux as Beethoven, wild grey hair and red scarf, conducting with a baton in front of a screen showing a square wave whose period visibly varies" class="h-[300px] w-auto rounded-lg" />
-    </div>
+  <div class="text-center text-base font-light text-gray-600 space-y-1 pb-1 -ml-[59px] -mr-10">
+    <a href="https://github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem" class="inline-flex items-center gap-1.5 text-sm text-blue-500 underline !border-b-0 font-normal">
+      <mdi-github class="text-sm" />
+      github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem
+    </a>
+    <div>Slides under Creative Commons license BY-SA 3.0.</div>
   </div>
 </div>
