@@ -2058,9 +2058,9 @@ Q&amp;A
     </div>
   </div>
   <div class="text-center text-base font-light text-gray-600 space-y-1 pb-1 -ml-[59px] -mr-10">
-    <a href="https://github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem" class="inline-flex items-center gap-1.5 text-sm text-blue-500 underline !border-b-0 font-normal">
-      <mdi-github class="text-sm" />
-      github.com/amarula/a-clockwork-frequency-bringing-spread-spectrum-to-the-linux-clock-subsystem
+    <a href="https://github.com/amarula/elce-2026-a-clockwork-frequency" class="inline-flex items-center gap-1.5 text-lg text-blue-500 underline !border-b-0 font-normal">
+      <mdi-github class="text-lg" />
+      github.com/amarula/elce-2026-a-clockwork-frequency
     </a>
     <div>Slides under Creative Commons license BY-SA 3.0.</div>
   </div>
