@@ -966,7 +966,7 @@ i.MX8M Mini/Nano/Plus - Linux Integration
     <div class="text-xs font-semibold uppercase tracking-[0.15em] text-gray-400 mb-2">2 &mdash; Current Linux integration</div>
     <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-0.5 items-baseline pl-2 mb-1">
       <div class="text-[#3AA83A] font-bold text-base">&#10003;</div>
-      <div class="text-base">DT bindings and DTS are <b>right</b></div>
+      <div class="text-base">DT bindings and SoC DTS are <b>right</b></div>
       <div class="text-[#CC0000] font-bold text-base">&#10007;</div>
       <div class="text-base">no anatop driver &mdash; <b>all clocks are defined and registered by the CCM driver</b>, PLLs too</div>
     </div>
