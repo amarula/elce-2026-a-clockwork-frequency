@@ -433,18 +433,21 @@ AM33xx/AM43xx - Linux Integration
   <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
     <span class="font-mono normal-case font-normal tracking-normal text-gray-500">drivers/clk/ti/dpll3xxx.c</span>
   </div>
-    <div class="font-mono text-[14px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none] mt-2 space-y-[8px]">
+    <div class="font-mono text-[14px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none] mt-2 space-y-[5px]">
       <div class="flex items-center">
-        <span class="text-gray-500"><b>omap3_noncore_dpll_set_rate</b>(hw, rate, parent_rate)</span>
+        <span class="text-gray-500">clk_set_rate()</span>
       </div>
       <div class="flex items-center">
-        <span class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[16px] mr-1" /><b>omap3_noncore_dpll_program</b>(clk, freqsel)</span>
+        <span class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[16px] mr-1 shrink-0" /><span class="text-gray-800">omap3_noncore_dpll_set_rate</span>(hw, rate, parent_rate)</span>
       </div>
       <div class="flex items-center">
-        <span class="text-gray-500 flex items-center"><span class="inline-block w-[6ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[16px] mr-1" /><b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(clk)</span>
+        <span class="text-gray-500 flex items-center"><span class="inline-block w-[5ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[16px] mr-1 shrink-0" />omap3_noncore_dpll_program(clk, freqsel)</span>
+      </div>
+      <div class="flex items-center">
+        <span class="text-gray-500 flex items-center"><span class="inline-block w-[8ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[16px] mr-1 shrink-0" /><b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(clk)</span>
       </div>
     </div>
-    <div class="h-5"></div>
+    <div class="h-4"></div>
     <div class="grid grid-cols-[0px_1fr] font-mono text-[14px] leading-[1.32] whitespace-nowrap [font-variant-ligatures:none]">
       <div></div>
       <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">omap3_noncore_dpll_ssc_program</b>(struct&nbsp;clk_hw_omap&nbsp;*clk)</div>
@@ -457,7 +460,7 @@ AM33xx/AM43xx - Linux Integration
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctrl&nbsp;|=&nbsp;dd-&gt;ssc_downspread_mask;</div>
       <div></div>
-      <div>&nbsp;</div>
+      <div class="h-[9px]"></div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mod_freq_divider&nbsp;=&nbsp;(ref_rate&nbsp;/&nbsp;dd-&gt;<b style="color:#22863a">last_rounded_n</b>)&nbsp;/&nbsp;(4&nbsp;*&nbsp;dd-&gt;<b style="color:#22863a">ssc_modfreq</b>);</div>
       <div></div>
