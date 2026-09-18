@@ -1400,7 +1400,7 @@ Generic SSC - Linux Core
 <div class="flex flex-col pl-[59px] pr-10 pt-0 h-[446px]">
   <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-[11px] mt-[6px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-conf.c</div>
-    <div class="absolute left-[470px] top-[12px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-4 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
+    <div class="absolute right-[12px] top-[12px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-4 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
       <span class="absolute -top-[9px] left-[9px] text-xl leading-none">&#128204;</span>
       <div class="font-mono text-[13.5px] font-bold" style="color:#22863a">__set_clk_spread_spectrum:</div>
       <ul class="list-disc pl-5 mt-1 [&>li]:!my-0 [&>li+li]:!mt-[5px] [&>li]:!leading-snug [&>li]:!text-[14.5px]">
@@ -1454,12 +1454,12 @@ i.MX95 - Linux Integration
 
 ::body::
 <div class="flex flex-col h-[446px] pl-[59px] pr-10 pt-[5px]">
-  <div class="relative rounded-lg border border-gray-300 px-4 pt-[18px] pb-1">
+  <div class="relative rounded-lg border border-gray-300 px-4 pt-[12px] pb-1">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold tracking-[0.15em] text-gray-700">
       v14
       <span class="font-mono font-normal tracking-normal text-gray-500">drivers/clk/clk-scmi-oem.c</span>
     </div>
-    <div class="absolute right-[8px] top-[20px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-3 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
+    <div class="absolute right-[12px] top-[12px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-3 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
       <span class="absolute -top-[9px] left-[9px] text-xl leading-none">&#128204;</span>
       <div class="font-mono text-[12px] font-bold" style="color:#22863a">scmi_clk_imx_set_spread_spectrum:</div>
       <ul class="list-disc pl-5 mt-1 [&>li]:!my-0 [&>li+li]:!mt-[5px] [&>li]:!leading-snug [&>li]:!text-[14.5px]">
@@ -1472,7 +1472,7 @@ i.MX95 - Linux Integration
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.query_ext_oem_feats&nbsp;=&nbsp;scmi_clk_imx_query_oem_feats,</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<b style="color:#22863a">set_spread_spectrum</b>&nbsp;=&nbsp;<b style="color:#22863a">scmi_clk_imx_set_spread_spectrum</b>,</div>
       <div class="text-gray-500">};</div>
-      <div class="h-[40px]"></div>
+      <div class="h-[46px]"></div>
       <div class="text-gray-500">static&nbsp;int</div>
       <div class="text-gray-500"><b style="color:#22863a">scmi_clk_imx_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
