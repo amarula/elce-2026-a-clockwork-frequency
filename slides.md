@@ -1536,6 +1536,14 @@ Back to i.MX8M - Linux Integration
   </div>
   <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-2 mt-[13px] flex-1 flex flex-col">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/imx/clk-pll14xx.c</div>
+    <div class="absolute right-[12px] top-[100px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-3 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
+      <span class="absolute -top-[9px] left-[9px] text-xl leading-none">&#128204;</span>
+      <div class="font-mono text-[12px] font-bold" style="color:#22863a">clk_pll1443x_set_spread_spectrum:</div>
+      <ul class="list-disc pl-5 mt-1 [&>li]:!my-0 [&>li+li]:!mt-[5px] [&>li]:!leading-snug [&>li]:!text-[14.5px]">
+        <li>register</li>
+        <li>implement</li>
+      </ul>
+    </div>
     <div class="grid grid-cols-2 gap-x-6 font-mono text-[12.5px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="space-y-[6px]">
         <div class="text-gray-500 flex items-center"><b style="color:#22863a">clk_hw_set_spread_spectrum</b>()</div>
@@ -1548,13 +1556,13 @@ Back to i.MX8M - Linux Integration
         <div class="text-gray-500 flex items-center"><span class="inline-block w-[6ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><b style="color:#22863a">__clk_pll1443x_set_spread_spectrum</b>()</div>
       </div>
     </div>
-    <div class="h-[38px]"></div>
+    <div class="h-[30px]"></div>
     <div class="font-mono text-[12.5px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">static&nbsp;const&nbsp;struct&nbsp;clk_ops&nbsp;<b>clk_pll1443x_ops</b>&nbsp;=&nbsp;{</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<b style="color:#22863a">set_spread_spectrum</b>&nbsp;=&nbsp;<b style="color:#22863a">clk_pll1443x_set_spread_spectrum</b>,</div>
       <div class="text-gray-500">};</div>
     </div>
-    <div class="h-[38px]"></div>
+    <div class="h-[46px]"></div>
     <div class="font-mono text-[12.5px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">__clk_pll1443x_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;parent_rate,</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;<b style="color:#22863a">pdiv</b>,&nbsp;unsigned&nbsp;int&nbsp;<b style="color:#22863a">mdiv</b>)</div>
