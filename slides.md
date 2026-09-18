@@ -1336,8 +1336,15 @@ Generic SSC - Linux API
       <div class="text-sm whitespace-nowrap"><span class="text-gray-500">reviewers</span> <b>Brian Masney</b>, <b>Sebin Francis</b>, <b>Cristian Marussi</b></div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[21px]">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-[12px] pb-1 mt-[21px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">include/linux/clk-provider.h</div>
+    <div class="absolute right-[12px] top-[12px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-4 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
+      <span class="absolute -top-[9px] left-[9px] text-xl leading-none">&#128204;</span>
+      <ul class="list-disc pl-5 [&>li]:!my-0 [&>li+li]:!mt-[5px] [&>li]:!leading-snug [&>li]:!text-[14.5px]">
+        <li>a new structure to store the SSC parameters</li>
+        <li>a new driver callback</li>
+      </ul>
+    </div>
     <div class="grid grid-cols-[500px_1fr] gap-x-5 items-center font-mono text-[12px] leading-[1.42] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">struct&nbsp;<b style="color:#22863a">clk_spread_spectrum</b>&nbsp;{</div>
       <div></div>
@@ -1349,7 +1356,7 @@ Generic SSC - Linux API
       <div></div>
       <div class="text-gray-500">};</div>
       <div></div>
-      <div class="h-2"></div>
+      <div class="h-1"></div>
       <div></div>
       <div class="text-gray-500">struct&nbsp;<b>clk_ops</b>&nbsp;{</div>
       <div></div>
@@ -1359,7 +1366,7 @@ Generic SSC - Linux API
       <div></div>
       <div class="text-gray-500">};</div>
       <div></div>
-      <div class="h-2"></div>
+      <div class="h-1"></div>
       <div></div>
       <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
@@ -1367,7 +1374,7 @@ Generic SSC - Linux API
       <div></div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-[9px] mt-[21px]">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-[12px] pb-[9px] mt-[21px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk.c</div>
     <div class="grid grid-cols-[500px_1fr] gap-x-5 items-center font-mono text-[12px] leading-[1.42] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
