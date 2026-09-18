@@ -359,12 +359,12 @@ Linux SSC Case Studies
 <Agenda :current="1" />
 
 ---
-title: AM33xx/AM43xx - Hardware
+title: Sitara AM33xx/AM43xx - Hardware
 ---
 
 ::title::
 
-AM33xx/AM43xx - Hardware
+Sitara AM33xx/AM43xx - Hardware
 
 ::body::
 
@@ -382,12 +382,12 @@ AM33xx/AM43xx - Hardware
 </div>
 
 ---
-title: AM33xx/AM43xx - Linux Integration
+title: Sitara AM33xx/AM43xx - Linux Integration
 ---
 
 ::title::
 
-AM33xx/AM43xx - Linux Integration
+Sitara AM33xx/AM43xx - Linux Integration
 
 ::body::
 
@@ -470,12 +470,12 @@ AM33xx/AM43xx - Linux Integration
 </div>
 
 ---
-title: AM33xx/AM43xx - SSC In Action
+title: Sitara AM33xx/AM43xx - SSC In Action
 ---
 
 ::title::
 
-AM33xx/AM43xx - SSC In Action
+Sitara AM33xx/AM43xx - SSC In Action
 
 ::body::
 
@@ -555,12 +555,12 @@ AM33xx/AM43xx - SSC In Action
 </div>
 
 ---
-title: AM33xx/AM43xx - Design Notes
+title: Sitara AM33xx/AM43xx - Design Notes
 ---
 
 ::title::
 
-AM33xx/AM43xx - Design Notes
+Sitara AM33xx/AM43xx - Design Notes
 
 ::body::
 
@@ -1909,7 +1909,7 @@ Resources
     </div>
   </div>
   <div>
-    <div class="text-lg font-semibold">AM33xx/AM43xx SSC Linux series</div>
+    <div class="text-lg font-semibold">Sitara AM33xx/AM43xx SSC Linux series</div>
     <div class="grid grid-cols-[68px_1fr] gap-x-2 font-mono text-[10.5px] leading-[1.2] mt-1">
       <div class="text-gray-500">v3</div>
       <div><a href="https://lore.kernel.org/r/20210329164222.26794-1-dariobin@libero.it" class="text-blue-500 underline !border-b-0">lore.kernel.org/r/20210329164222.26794-1-dariobin@libero.it</a></div>

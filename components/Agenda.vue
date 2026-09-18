@@ -31,7 +31,13 @@ const SECTIONS = [
   {
     title: 'Linux SSC Case Studies',
     items: [
-      { img: tiLogo, alt: 'Texas Instruments', size: 'h-8', label: 'AM33xx/AM43xx' },
+      // "Sitara" is TI's family name for the AM33xx and AM43xx, and the name the
+      // speech uses for this case from page 16 on; the slides never printed
+      // it, so the link between the spoken name and the part numbers was made
+      // once, aloud (Dario, 2026-09-18). It is printed here, next to the TI
+      // mark, and so on the agenda and both dividers; the page titles keep
+      // the short prefix.
+      { img: tiLogo, alt: 'Texas Instruments', size: 'h-8', label: 'Sitara AM33xx/AM43xx' },
       { st: true, label: 'STM32F4/STM32F7' },
       { img: nxpLogo, alt: 'NXP', size: 'h-5', label: 'i.MX8M Mini/Nano/Plus' },
     ],
