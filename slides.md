@@ -1315,7 +1315,7 @@ Generic SSC - Linux API
 
 ::body::
 
-<div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-[8px]">
+<div class="flex flex-col h-[440px] pl-[59px] pr-10 pt-[5px]">
   <div class="relative rounded-lg border border-gray-300 px-4 py-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
       <span class="inline-block rounded-full bg-[#22863a]" style="width: 0.8em; height: 0.8em; position: relative; top: 0.02em; margin-right: 0.15em"></span>
@@ -1336,10 +1336,9 @@ Generic SSC - Linux API
       <div class="text-sm whitespace-nowrap"><span class="text-gray-500">reviewers</span> <b>Brian Masney</b>, <b>Sebin Francis</b>, <b>Cristian Marussi</b></div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[24px]">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[21px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">include/linux/clk-provider.h</div>
-    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11px] leading-[1.42] whitespace-nowrap [font-variant-ligatures:none]">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; SSC parameters</div>
+    <div class="grid grid-cols-[500px_1fr] gap-x-5 items-center font-mono text-[12px] leading-[1.42] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">struct&nbsp;<b style="color:#22863a">clk_spread_spectrum</b>&nbsp;{</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;<b style="color:#22863a">modfreq_hz</b>;</div>
@@ -1350,36 +1349,40 @@ Generic SSC - Linux API
       <div></div>
       <div class="text-gray-500">};</div>
       <div></div>
-      <div class="h-4"></div>
+      <div class="h-2"></div>
       <div></div>
       <div class="text-gray-500">struct&nbsp;<b>clk_ops</b>&nbsp;{</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; driver callback</div>
+      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(*<b style="color:#22863a">set_spread_spectrum</b>)(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
       <div></div>
       <div class="text-gray-500">};</div>
       <div></div>
-      <div class="h-4"></div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; core API</div>
+      <div class="h-2"></div>
+      <div></div>
       <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf);</div>
+      <div></div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-1 mt-[24px]">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-2 pb-[9px] mt-[21px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk.c</div>
-    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11px] leading-[1.42] whitespace-nowrap [font-variant-ligatures:none]">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; core</div>
+    <div class="grid grid-cols-[500px_1fr] gap-x-5 items-center font-mono text-[12px] leading-[1.42] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">int&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(struct&nbsp;clk_hw&nbsp;*hw,</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*ss_conf)</div>
       <div></div>
       <div class="text-gray-500">{</div>
-      <div class="ml-[58px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">to</div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>)</div>
-      <div class="ml-[80px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">driver</div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>(hw,&nbsp;ss_conf);</div>
+      <div></div>
+      <div class="relative w-fit ml-[8ch]">
+        <div class="absolute -inset-x-3 -inset-y-[3px] rounded-md border-2 border-[#fdcb0e] pointer-events-none"></div>
+        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-7 whitespace-nowrap font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">to driver</div>
+        <div class="text-gray-500">if&nbsp;(core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>)</div>
+        <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret&nbsp;=&nbsp;core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>(hw,&nbsp;ss_conf);</div>
+      </div>
+      <div></div>
     </div>
   </div>
 </div>
