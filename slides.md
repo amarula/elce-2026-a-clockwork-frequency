@@ -1009,7 +1009,7 @@ i.MX8M Mini/Nano/Plus - Linux Integration
     </div>
     <div class="border-t border-gray-200 mt-4 pt-2"></div>
     <div class="text-xs font-semibold uppercase tracking-[0.15em] text-gray-400 mb-2">3 &mdash; Proposed solution</div>
-    <div class="text-xl font-semibold pl-2">Give the PLLs <b>its</b> owner &mdash; the <b>anatop</b> &mdash; so the CCM can <b>consume</b> them</div>
+    <div class="text-xl font-semibold pl-2">Give the PLLs <b>their</b> owner &mdash; the <b>anatop</b> &mdash; so the CCM can <b>consume</b> them</div>
   </div>
 
 </div>
