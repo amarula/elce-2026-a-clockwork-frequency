@@ -631,16 +631,16 @@ STM32F4/STM32F7 - Linux Integration
     </div>
   </div>
 
-  <div class="relative rounded-lg border border-gray-300 px-4 py-1">
+  <div class="relative rounded-lg border border-gray-300 px-4 py-2">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
       <span class="font-mono font-normal normal-case tracking-normal text-gray-500 [font-variant-ligatures:none]">Documentation/devicetree/bindings/clock/st,stm32-rcc.yaml</span>
     </div>
-    <div class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-0 text-[13px] leading-[1.15] items-baseline">
-      <div class="font-mono">st,ssc-moddepth-permyriad</div>
+    <div class="grid grid-cols-[auto_1fr] gap-x-6 gap-y-0 text-[14px] leading-[1.4] items-baseline">
+      <div class="font-mono"><b style="color:#22863a">st,ssc-moddepth-permyriad</b></div>
       <div>spreading depth, in hundredths of a percent</div>
-      <div class="font-mono">st,ssc-modfreq-hz</div>
+      <div class="font-mono"><b style="color:#22863a">st,ssc-modfreq-hz</b></div>
       <div>modulation rate</div>
-      <div class="font-mono">st,ssc-modmethod</div>
+      <div class="font-mono"><b style="color:#22863a">st,ssc-modmethod</b></div>
       <div>spread type, string &mdash; <span class="font-mono">"center-spread"</span> or <span class="font-mono">"down-spread"</span></div>
     </div>
   </div>
@@ -649,47 +649,35 @@ STM32F4/STM32F7 - Linux Integration
   <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">
     <span class="font-mono font-normal normal-case tracking-normal text-gray-500">drivers/clk/clk-stm32f4.c</span>
   </div>
-    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11.5px] leading-[1.33] whitespace-nowrap [font-variant-ligatures:none]">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; on init</div>
-      <div class="text-gray-500">static&nbsp;void&nbsp;__init&nbsp;<b>stm32f4_rcc_init</b>(struct&nbsp;device_node&nbsp;*np)</div>
+    <div class="grid grid-cols-2 gap-x-6 font-mono text-[13px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none] mt-3">
+      <div class="space-y-[7px]">
+        <div class="text-gray-500 flex items-center">of_clk_init()</div>
+        <div class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><span class="text-gray-800">stm32f4_rcc_init</span>(np)</div>
+        <div class="text-gray-500 flex items-center"><span class="inline-block w-[6ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><b style="color:#22863a">stm32f4_pll_init_ssc</b>(pll_vco_hw,&nbsp;&amp;ssc_conf)</div>
+        <div class="text-gray-500 flex items-center"><span class="inline-block w-[10ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><b style="color:#22863a">stm32f4_pll_set_ssc</b>(hw,&nbsp;parent_rate,&nbsp;<b style="color:#22863a">n</b>)</div>
+      </div>
+      <div class="space-y-[7px]">
+        <div class="text-gray-500 flex items-center">clk_set_rate()</div>
+        <div class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><span class="text-gray-800">stm32f4_pll_set_rate</span>(hw,&nbsp;rate,&nbsp;parent_rate)</div>
+        <div class="text-gray-500 flex items-center"><span class="inline-block w-[6ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><b style="color:#22863a">stm32f4_pll_set_ssc</b>(hw,&nbsp;parent_rate,&nbsp;<b style="color:#22863a">n</b>)</div>
+      </div>
+    </div>
+    <div class="h-12"></div>
+    <div class="grid grid-cols-[0px_1fr] font-mono text-[13px] leading-[1.4] whitespace-nowrap [font-variant-ligatures:none] pb-1">
       <div></div>
-      <div class="text-gray-500">{</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!<b style="color:#22863a">stm32f4_pll_ssc_parse_dt</b>(np,&nbsp;&amp;ssc_conf))</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">stm32f4_pll_init_ssc</b>(pll_vco_hw,&nbsp;&amp;ssc_conf);</div>
-      <div></div>
-      <div class="h-6"></div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; on rate change</div>
-      <div class="text-gray-500">static&nbsp;int&nbsp;<b>stm32f4_pll_set_rate</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;rate,</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;long&nbsp;parent_rate)</div>
-      <div></div>
-      <div class="text-gray-500">{</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(pll-&gt;ssc_enable)</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#22863a">stm32f4_pll_set_ssc</b>(hw,&nbsp;parent_rate,&nbsp;<b style="color:#22863a">n</b>);</div>
-      <div></div>
-      <div class="h-6"></div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; SSC setup</div>
-      <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">stm32f4_pll_set_ssc</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;parent_rate,</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unsigned&nbsp;int&nbsp;<b style="color:#22863a">ndiv</b>)</div>
+      <div class="text-gray-500">static&nbsp;void&nbsp;<b style="color:#22863a">stm32f4_pll_set_ssc</b>(struct&nbsp;clk_hw&nbsp;*hw,&nbsp;unsigned&nbsp;long&nbsp;parent_rate,&nbsp;unsigned&nbsp;int&nbsp;<b style="color:#22863a">ndiv</b>)</div>
       <div></div>
       <div class="text-gray-500">{</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modeper&nbsp;=&nbsp;DIV_ROUND_CLOSEST(parent_rate,&nbsp;4&nbsp;*&nbsp;ssc-&gt;<b style="color:#22863a">mod_freq</b>);</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;incstep&nbsp;=&nbsp;DIV_ROUND_CLOSEST(((1&nbsp;&lt;&lt;&nbsp;15)&nbsp;-&nbsp;1)&nbsp;*&nbsp;ssc-&gt;<b style="color:#22863a">mod_depth</b>&nbsp;*&nbsp;<b style="color:#22863a">ndiv</b>,</div>
+      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;incstep&nbsp;=&nbsp;DIV_ROUND_CLOSEST(((1&nbsp;&lt;&lt;&nbsp;15)&nbsp;-&nbsp;1)&nbsp;*&nbsp;ssc-&gt;<b style="color:#22863a">mod_depth</b>&nbsp;*&nbsp;<b style="color:#22863a">ndiv</b>,&nbsp;5&nbsp;*&nbsp;10000&nbsp;*&nbsp;modeper);</div>
       <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;*&nbsp;10000&nbsp;*&nbsp;modeper);</div>
+      <div class="h-[9px]"></div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(ssc-&gt;<b style="color:#22863a">mod_type</b>)</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sscgr&nbsp;|=&nbsp;STM32F4_RCC_SSCGR_SPREADSEL;</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writel(sscgr,&nbsp;base&nbsp;+&nbsp;STM32F4_RCC_SSCGR);</div>
     </div>
   </div>
 </div>
