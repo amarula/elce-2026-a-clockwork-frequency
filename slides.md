@@ -1397,61 +1397,51 @@ Generic SSC - Linux Core
 
 ::body::
 
-<div class="flex flex-col pl-[59px] pr-10 pt-[5px] h-[446px]">
-  <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-2 mt-2">
+<div class="flex flex-col pl-[59px] pr-10 pt-0 h-[446px]">
+  <div class="relative rounded-lg border border-gray-300 px-4 pt-2 pb-[11px] mt-[6px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">drivers/clk/clk-conf.c</div>
-    <div class="grid grid-cols-[185px_1fr] gap-x-5 font-mono text-[11px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none]">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; early in clock setup</div>
-      <div class="text-gray-500">int&nbsp;<b>of_clk_set_defaults</b>(struct&nbsp;device_node&nbsp;*node,&nbsp;bool&nbsp;clk_supplier)</div>
-      <div></div>
-      <div class="text-gray-500">{</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; SSC through DT</div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;<b style="color:#22863a">__set_clk_spread_spectrum</b>(node,&nbsp;clk_supplier);</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;__set_clk_parents(node,&nbsp;clk_supplier);</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;__set_clk_rates(node,&nbsp;clk_supplier);</div>
-      <div></div>
-      <div>&nbsp;</div>
-      <div></div>
+    <div class="absolute left-[470px] top-[12px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-4 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
+      <span class="absolute -top-[9px] left-[9px] text-xl leading-none">&#128204;</span>
+      <div class="font-mono text-[13.5px] font-bold" style="color:#22863a">__set_clk_spread_spectrum:</div>
+      <ul class="list-disc pl-5 mt-1 [&>li]:!my-0 [&>li+li]:!mt-[5px] [&>li]:!leading-snug [&>li]:!text-[14.5px]">
+        <li>gets the SSC setup from the DT</li>
+        <li>skips the empty entries</li>
+        <li>pairs each SSC setup with its clock</li>
+        <li>calls the driver callback</li>
+      </ul>
+    </div>
+    <div class="font-mono text-[13px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none] mt-1 space-y-[5px]">
+      <div class="text-gray-500 flex items-center">of_clk_set_defaults(node,&nbsp;clk_supplier)</div>
+      <div class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><b style="color:#22863a">__set_clk_spread_spectrum</b>(node,&nbsp;clk_supplier)</div>
+      <div class="text-gray-500 flex items-center"><span class="inline-block w-[6ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" /><b style="color:#22863a">clk_hw_set_spread_spectrum</b>(hw,&nbsp;<b style="color:#22863a">conf</b>)</div>
+      <div class="text-gray-500 flex items-center"><span class="inline-block w-[10ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" />core-&gt;ops-&gt;<b style="color:#22863a">set_spread_spectrum</b>(hw,&nbsp;<b style="color:#22863a">conf</b>)</div>
+      <div class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" />__set_clk_parents(node,&nbsp;clk_supplier)</div>
+      <div class="text-gray-500 flex items-center"><span class="inline-block w-[2ch]"></span><mdi-subdirectory-arrow-right class="text-[#fdcb0e] text-[15px] mr-1 shrink-0" />__set_clk_rates(node,&nbsp;clk_supplier)</div>
+    </div>
+    <div class="h-[30px]"></div>
+    <div class="font-mono text-[13px] leading-[1.25] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">static&nbsp;int&nbsp;<b style="color:#22863a">__set_clk_spread_spectrum</b>(struct&nbsp;device_node&nbsp;*node,</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bool&nbsp;clk_supplier)</div>
-      <div></div>
       <div class="text-gray-500">{</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;u32&nbsp;elem_size&nbsp;=&nbsp;sizeof(struct&nbsp;clk_spread_spectrum);</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;of_property_count_elems_of_size(node,&nbsp;"<b style="color:#22863a">assigned-clock-sscs</b>",</div>
-      <div></div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elem_size);</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; load SSC parameters</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;of_property_read_u32_array(node,&nbsp;"<b style="color:#22863a">assigned-clock-sscs</b>",&nbsp;(u32&nbsp;*)<b style="color:#22863a">sscs</b>,</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;*&nbsp;3);</div>
-      <div></div>
-      <div>&nbsp;</div>
-      <div></div>
+      <div class="h-[8px]"></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(<b>index</b>&nbsp;=&nbsp;0;&nbsp;<b>index</b>&nbsp;&lt;&nbsp;count;&nbsp;<b>index</b>++)&nbsp;{</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">4 &mdash; SSC</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;struct&nbsp;clk_spread_spectrum&nbsp;*<b style="color:#22863a">conf</b>&nbsp;=&nbsp;&amp;<b style="color:#22863a">sscs</b>[<b>index</b>];</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!conf-&gt;<b style="color:#22863a">modfreq_hz</b>&nbsp;&amp;&amp;&nbsp;!conf-&gt;<b style="color:#22863a">spread_bp</b>&nbsp;&amp;&amp;&nbsp;!conf-&gt;<b style="color:#22863a">method</b>)</div>
-      <div class="ml-[50px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">to</div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;</div>
-      <div class="ml-[72px] text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">clock</div>
+      <div class="h-[8px]"></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;of_parse_phandle_with_args(node,&nbsp;"<b>assigned-clocks</b>",</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"#clock-cells",&nbsp;<b>index</b>,&nbsp;&amp;clkspec);</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clk&nbsp;=&nbsp;of_clk_get_from_provider(&amp;clkspec);</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hw&nbsp;=&nbsp;__clk_get_hw(clk);</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">5 &mdash; the core call</div>
-      <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rc&nbsp;=&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(hw,&nbsp;<b style="color:#22863a">conf</b>);</div>
+      <div class="relative w-fit ml-[16ch] mt-[4px]">
+        <div class="absolute -inset-x-3 -inset-y-[3px] rounded-md border-2 border-[#fdcb0e] pointer-events-none"></div>
+        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-7 whitespace-nowrap font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">to driver</div>
+        <div class="text-gray-500">rc&nbsp;=&nbsp;<b style="color:#22863a">clk_hw_set_spread_spectrum</b>(hw,&nbsp;<b style="color:#22863a">conf</b>);</div>
+      </div>
     </div>
   </div>
-  <div class="mt-[22px] text-xl font-mono font-semibold">assigned-clock-sscs<span class="text-gray-400">[i]</span><svg viewBox="0 0 72 24" class="inline-block w-[72px] h-[24px] mx-3 align-middle" aria-hidden="true"><rect x="0" y="8.5" width="52" height="7" rx="2" fill="#fdcb0e"/><path d="M50 1 L71 12 L50 23 Z" fill="#fdcb0e"/></svg>assigned-clocks<span class="text-gray-400">[i]</span></div>
 </div>
 
 ---
