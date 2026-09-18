@@ -1251,18 +1251,25 @@ Generic SSC - DT Schema
       <div class="text-sm whitespace-nowrap"><span class="text-gray-500">participants</span> <b>Krzysztof Kozlowski</b>, <b>Rob Herring</b>, <b>Dario Binacchi</b></div>
     </div>
   </div>
-  <div class="relative rounded-lg border border-gray-300 px-6 pt-4 pb-2 mt-[20px]">
+  <div class="relative rounded-lg border border-gray-300 px-6 pt-3 pb-2 mt-[20px]">
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-mono text-gray-500">dtschema/schemas/clock/clock.yaml</div>
-    <div class="grid grid-cols-[auto_1fr] gap-x-5 font-mono text-[10px] leading-[1.35] [font-variant-ligatures:none]">
-      <div></div>
+    <div class="absolute left-[420px] top-[10px] rounded-lg border border-[#fdcb0e] bg-[#fef7dc] px-4 pt-[13px] pb-2 font-sans text-[14.5px] leading-snug text-gray-800 whitespace-nowrap">
+      <span class="absolute -top-[9px] left-[9px] text-xl leading-none">&#128204;</span>
+      <div class="font-mono text-[13.5px] font-bold" style="color:#22863a">assigned-clock-sscs:</div>
+      <ul class="list-disc pl-5 mt-1 [&>li]:!my-0 [&>li+li]:!mt-[8px] [&>li]:!leading-snug [&>li]:!text-[14.5px]">
+        <li>a list, one entry per clock: three u32 values</li>
+        <li>needs assigned-clocks</li>
+      </ul>
+    </div>
+    <div class="grid grid-cols-[430px_1fr] gap-x-5 items-center font-mono text-[10.5px] leading-[1.3] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">properties:</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;<b style="color:#22863a">assigned-clock-sscs</b>:</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;$ref:&nbsp;/schemas/types.yaml#/definitions/uint32-matrix</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; a list, one entry per clock</div>
+      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; three u32 values each</div>
+      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items:</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;description:&nbsp;<b style="color:#22863a">The&nbsp;modulation&nbsp;frequency</b></div>
@@ -1273,7 +1280,7 @@ Generic SSC - DT Schema
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;up-spread(2),&nbsp;center-spread(1),&nbsp;no-spread(0)</div>
       <div></div>
-      <div>&nbsp;</div>
+      <div class="h-[7px]"></div>
       <div></div>
       <div class="text-gray-500">dependentRequired:</div>
       <div></div>
@@ -1282,8 +1289,9 @@ Generic SSC - DT Schema
       <div class="text-gray-500">&nbsp;&nbsp;assigned-clock-rates:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[assigned-clocks]</div>
       <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;assigned-clock-rates-u64:&nbsp;[assigned-clocks]</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; needs assigned-clocks</div>
+      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;<b style="color:#22863a">assigned-clock-sscs</b>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[assigned-clocks]</b></div>
+      <div></div>
     </div>
   </div>
   <div class="mt-[13px] text-xl font-semibold">
