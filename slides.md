@@ -1577,20 +1577,13 @@ Back to i.MX8M - SSC In Action
     <div class="absolute -top-3 left-4 bg-white px-2 text-xs font-semibold tracking-[0.15em] text-gray-700">
       <span class="font-mono font-normal tracking-normal text-gray-500">arch/arm64/boot/dts/freescale/imx8mp.dtsi</span>
     </div>
-    <div class="grid grid-cols-[150px_1fr] gap-x-4 font-mono text-[12px] leading-[1.8] whitespace-nowrap [font-variant-ligatures:none]">
-      <div></div>
+    <div class="font-mono text-[12px] leading-[1.8] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">clk:&nbsp;clock-controller@30380000&nbsp;{</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigned-clocks&nbsp;=&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_A53_SRC&gt;,&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_A53_CORE&gt;,</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_NOC&gt;,&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_NOC_IO&gt;,</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_GIC&gt;;</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigned-clock-rates&nbsp;=&nbsp;&lt;0&gt;,&nbsp;&lt;0&gt;,&nbsp;&lt;1000000000&gt;,</div>
-      <div></div>
       <div class="text-gray-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;800000000&gt;,&nbsp;&lt;500000000&gt;;</div>
-      <div></div>
       <div class="text-gray-500">};</div>
     </div>
   </div>
@@ -1599,24 +1592,19 @@ Back to i.MX8M - SSC In Action
       custom board
       <span class="font-mono font-normal tracking-normal text-gray-500 text-[10px]">LVDS panel 1280x800 &middot; SSC: 6818 Hz, 3 %, down-spread</span>
     </div>
-    <div class="grid grid-cols-[150px_1fr] gap-x-4 font-mono text-[12px] leading-[1.8] whitespace-nowrap [font-variant-ligatures:none]">
-      <div></div>
+    <div class="font-mono text-[12px] leading-[1.8] whitespace-nowrap [font-variant-ligatures:none]">
       <div class="text-gray-500">&amp;clk&nbsp;{</div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">1 &mdash; the five, restated</div>
-      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigned-clocks&nbsp;=&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_A53_SRC&gt;,&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_A53_CORE&gt;,</b></div>
-      <div></div>
-      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_NOC&gt;,&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_NOC_IO&gt;,</b></div>
-      <div></div>
-      <div class="text-gray-500"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_GIC&gt;,</b></div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">2 &mdash; plus video PLL1</div>
+      <div class="relative w-fit ml-[26ch]">
+        <div class="absolute -left-[5px] -right-3 -inset-y-[1px] rounded-md border-2 border-[#fdcb0e] pointer-events-none"></div>
+        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-7 whitespace-nowrap font-sans text-xs font-semibold uppercase tracking-[0.15em] text-gray-700">restate the S<span class="normal-case">o</span>C clocks</div>
+        <div class="text-gray-500"><b><span class="absolute right-full top-0 whitespace-nowrap">assigned-clocks&nbsp;=&nbsp;</span>&lt;&amp;clk&nbsp;IMX8MP_CLK_A53_SRC&gt;,&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_A53_CORE&gt;,</b></div>
+        <div class="text-gray-500"><b>&lt;&amp;clk&nbsp;IMX8MP_CLK_NOC&gt;,&nbsp;&lt;&amp;clk&nbsp;IMX8MP_CLK_NOC_IO&gt;,</b></div>
+        <div class="text-gray-500"><b>&lt;&amp;clk&nbsp;IMX8MP_CLK_GIC&gt;,</b></div>
+      </div>
       <div style="color:#22863a"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&amp;clk&nbsp;IMX8MP_VIDEO_PLL1&gt;;</b></div>
-      <div></div>
       <div style="color:#22863a"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assigned-clock-sscs&nbsp;=&nbsp;&lt;0&nbsp;0&nbsp;0&gt;,&nbsp;&lt;0&nbsp;0&nbsp;0&gt;,&nbsp;&lt;0&nbsp;0&nbsp;0&gt;,</b></div>
-      <div></div>
       <div style="color:#22863a"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;0&nbsp;0&nbsp;0&gt;,&nbsp;&lt;0&nbsp;0&nbsp;0&gt;,</b></div>
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-gray-500 whitespace-nowrap">3 &mdash; video PLL1 setup</div>
       <div style="color:#22863a"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;6818&nbsp;300&nbsp;CLK_SSC_DOWN_SPREAD&gt;;</b></div>
-      <div></div>
       <div class="text-gray-500">};</div>
     </div>
   </div>
