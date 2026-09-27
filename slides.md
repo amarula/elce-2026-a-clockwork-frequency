@@ -296,8 +296,8 @@ Understanding SSC - How Does It Work ?
 
 ::body::
 
-<div class="flex flex-col items-center h-[446px]">
-  <ul class="list-disc pl-5 mt-[23px] text-2xl space-y-3 max-w-4xl">
+<div class="flex flex-col items-center">
+  <ul class="list-disc pl-5 text-2xl space-y-3 max-w-4xl">
     <li>The clock frequency is <strong>frequency-modulated</strong> around its nominal value</li>
     <li><strong>Four</strong> parameters configure the spread:
       <ul class="list-none pl-0 mt-2 space-y-1">
@@ -319,11 +319,32 @@ Understanding SSC - How Does It Work ?
         </li>
       </ul>
     </li>
-    <li>The total energy remains <strong>unchanged</strong></li>
   </ul>
+</div>
+
+---
+title: Understanding SSC - Same Energy
+---
+
+::title::
+
+Understanding SSC - Same Energy
+
+::body::
+
+<div class="flex flex-col items-center h-[446px]">
+  <div class="relative mt-[10px]">
+    <img src="./assets/ssc-clock-voltage.png" class="max-h-[350px] w-auto rounded shadow" alt="Two oscilloscope traces of a 100 MHz clock over 200 ns, both swinging between 0 and 3.3 volts, a dimension arrow marking the same 3.3 V swing on each: the non-spread clock with a constant period, and the spread clock whose period shrinks and widens" />
+    <div class="absolute right-full mr-6 top-[179px] -translate-y-1/2 w-[230px] text-2xl text-right"><strong>E = V<sup>2</sup> &middot; t<sub>high</sub> / R</strong></div>
+    <div class="absolute left-full ml-6 top-0 h-full w-[230px] text-2xl">
+      <div class="absolute top-[115px] -translate-y-1/2 text-[#0000EE] whitespace-nowrap">(3.3 V)<sup>2</sup> &middot; 50 ns / R</div>
+      <div class="absolute top-[179px] -translate-y-1/2 text-gray-500 text-3xl ml-6">=</div>
+      <div class="absolute top-[243px] -translate-y-1/2 text-[#E69F00] whitespace-nowrap">(3.3 V)<sup>2</sup> &middot; 50 ns / R</div>
+    </div>
+  </div>
   <div class="mt-auto flex items-center justify-center gap-4 text-2xl">
-    <mdi-alert class="w-11 h-11 text-[#fdcb0e] shrink-0" />
-    <span><b>Increases clock jitter</b> <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">not suitable for timing-sensitive peripherals</span></span>
+    <mdi-scale-balance class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    <span><b>Total energy unchanged</b> <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">same amplitude, same time high</span></span>
   </div>
 </div>
 
@@ -343,6 +364,27 @@ Understanding SSC - In Action
     <mdi-scale-balance class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     <span><b>Total energy unchanged</b> <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">half the band, twice the density</span></span>
     <span class="flex items-center gap-2 text-sm text-gray-500 ml-2"><span>low</span><span class="inline-block w-[110px] h-[13px] rounded-sm" style="background: linear-gradient(90deg, #F7E3B0, #E69F00, #9C5F00)"></span><span>high</span></span>
+  </div>
+</div>
+
+---
+title: Understanding SSC - The Price
+---
+
+::title::
+
+Understanding SSC - The Price
+
+::body::
+
+<div class="flex flex-col items-center h-[446px]">
+  <div class="relative mt-[10px]">
+    <img src="./assets/ssc-clock-time-domain.png" class="max-h-[350px] w-auto rounded shadow" alt="Two oscilloscope traces of a 100 MHz clock over 200 ns, both swinging between 0 and 3.3 volts: the non-spread clock with a constant period, and the spread clock whose period shrinks and widens twice, its edges drifting away from the fixed ones" />
+    <div class="absolute left-full ml-6 top-[243px] -translate-y-1/2 w-[215px] text-2xl"><strong>the period gets shorter and longer</strong></div>
+  </div>
+  <div class="mt-auto flex items-center justify-center gap-4 text-2xl">
+    <mdi-alert class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    <span><b>More jitter</b> <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">not suitable for timing-sensitive peripherals</span></span>
   </div>
 </div>
 
