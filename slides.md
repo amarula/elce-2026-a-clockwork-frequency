@@ -208,13 +208,17 @@ Understanding SSC - EMI
 
 ::body::
 
-<div class="flex flex-col items-center gap-4">
-  <ul class="list-disc pl-5 text-2xl space-y-4 max-w-4xl">
+<div class="flex flex-col items-center gap-4 h-[446px]">
+  <ul class="list-disc pl-5 text-2xl space-y-2 max-w-4xl">
     <li>A digital clock: energy spikes at the fundamental and its harmonics</li>
     <li>PCB traces: unintentional antennas radiating that energy</li>
     <li>Nearby devices: can be disturbed</li>
   </ul>
-  <img src="./assets/antenna-radiation-diagram.png" class="max-w-xl rounded shadow" alt="Clock signal traveling down a PCB trace that acts as an unintentional antenna, radiating energy toward a nearby device that becomes disturbed" />
+  <img src="./assets/antenna-radiation-diagram.png" class="max-h-[220px] w-auto rounded shadow" alt="Clock signal traveling down a PCB trace that acts as an unintentional antenna, radiating energy toward a nearby device that becomes disturbed" />
+  <div class="mt-auto flex items-center justify-center gap-4 text-2xl">
+    <mdi-alert class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    <span>EMC compliance is mandatory <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">no pass, no market</span></span>
+  </div>
 </div>
 
 ---
