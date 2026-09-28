@@ -347,7 +347,7 @@ Understanding SSC - Same Energy
     </div>
   </div>
   <div class="mt-auto flex items-center justify-center gap-4 text-2xl">
-    <mdi-scale-balance class="w-11 h-11 text-[#fdcb0e] shrink-0" />
+    <mdi-hand-pointing-right class="w-11 h-11 text-[#fdcb0e] shrink-0" />
     <span><b>Total energy unchanged</b> <span class="text-gray-400">&mdash;</span> <span class="text-gray-600">same amplitude, same time high</span></span>
   </div>
 </div>
