@@ -15,14 +15,6 @@
   visibility: hidden;
 }
 
-/* Slidev's presenter view (/presenter) draws a progress bar across the bottom
-   of the current-slide pane -- see @slidev/client/pages/presenter.vue. It is
-   the only element in the codebase actually called a progress bar; nothing on
-   the slides themselves draws one. Not wanted. */
-.progress-bar {
-  display: none !important;
-}
-
 /* Slidev's ```lang {12,21-23} marks those lines .slidev-code-highlighted and
    fades every other line to 30 % (.slidev-code-dishonored). Inside .code-mark we
    want only the first half of that: the marked lines come out bold, everything
